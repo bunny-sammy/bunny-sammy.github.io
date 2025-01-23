@@ -49,10 +49,22 @@ p {
     align-items: center;
     justify-content: center;
     height: 100vh;
-
+    width: 100vw;
     gap:1rem;
+
+    background-image: url("../assets/img/art/halloween2020.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
+@media (max-height: 768px) {
+    #landing {
+        background-position: -200px center;
+    }
+}
+
+/* Art gallery */
 #art-gallery {
     display: grid;
     grid-auto-flow: column;
