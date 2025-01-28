@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
+import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { i18n, t } = useTranslation();
 
   return (
     <>
@@ -18,11 +20,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => i18n.changeLanguage('en')}>
+          {t("switch_language")}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          {t("title")}
         </p>
       </div>
       <p className="read-the-docs">
