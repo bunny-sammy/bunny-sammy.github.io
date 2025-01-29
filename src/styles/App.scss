@@ -1,12 +1,17 @@
-// VARIÁVEIS
-$background1: #DCEBF3;
-$background2: #EFF5F8;
-$text1: #51607E;
-$text2: #97AAD0;
-$text3: #FFFFFF;
-$accent1: #F87FAB;
+@import "./_variables.scss";
 
 body {
   background-color: $background1;
   color: $text1;
+  font-weight: 450;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 550;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
