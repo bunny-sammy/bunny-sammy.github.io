@@ -2,6 +2,7 @@
 
 .landing {
 
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -39,4 +40,55 @@
         }
     }
 
+    div.scroll-icon {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        animation: scroll-down-idle 7s linear infinite;
+
+        svg {
+            color: $text1;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+@keyframes scroll-down-idle {
+    80% {
+        transform: translate(-50%, 0);
+    }
+
+    85% {
+        transform: translate(-50%, -0.75rem);
+    }
+
+    87% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    89% {
+        transform: translate(-50%, 0.3rem);
+    }
+
+    90% {
+        transform: translate(-50%, 0);
+    }
+
+    95% {
+        transform: translate(-50%, -0.75rem);
+    }
+
+    97% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    99% {
+        transform: translate(-50%, 0.3rem);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
 }

@@ -7,6 +7,7 @@ import LinkedIcon from '../assets/icons/landing_linkedin.svg?react';
 import ItchIcon from '../assets/icons/landing_itch.svg?react';
 import GitIcon from '../assets/icons/landing_github.svg?react';
 import IgIcon from '../assets/icons/landing_instagram.svg?react';
+import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
 export default function Landing() {
     const { i18n, t } = useTranslation();
@@ -38,6 +39,9 @@ export default function Landing() {
                 <a href={socials[3]}>
                     <IgIcon/>
                 </a>
+            </div>
+            <div className="scroll-icon">
+                <ScrollIcon/>
             </div>
         </div >
     )
