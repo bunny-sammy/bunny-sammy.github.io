@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from 'react'
 
-import '../styles/Landing.scss';
+import '../styles/components/Landing.scss';
 import profilePic from '../assets/images/profile.png';
 import LinkedIcon from '../assets/icons/landing_linkedin.svg?react';
 import ItchIcon from '../assets/icons/landing_itch.svg?react';

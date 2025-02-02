@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@use "../abstract/_variables.scss" as *;
 
 .landing {
 
@@ -45,7 +45,10 @@
         bottom: 0.5rem;
         left: 50%;
         transform: translate(-50%, 0);
-        animation: scroll-down-idle 7s linear infinite;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: scroll-down-idle 7s linear infinite;
+        }
 
         svg {
             color: $text1;

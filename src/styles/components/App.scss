@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@use "../abstract/_variables.scss" as *;
 
 body {
   background-color: $background1;

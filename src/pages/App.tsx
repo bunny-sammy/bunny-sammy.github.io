@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from 'react'
 
-import '../styles/App.scss'
+import '../styles/components/App.scss'
 import Landing from "../components/Landing";
 
 export default function App() {
