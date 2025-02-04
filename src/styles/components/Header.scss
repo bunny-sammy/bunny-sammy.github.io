@@ -1,0 +1,16 @@
+@use "../abstract/_variables.scss" as *;
+
+header {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.5rem;
+    align-items: center;
+    background-color: $accent1;
+    color: $text3;
+
+    scroll-snap-align: start;
+}

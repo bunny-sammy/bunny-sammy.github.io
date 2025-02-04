@@ -1,9 +1,25 @@
 @use "../abstract/_variables.scss" as *;
 
-body {
+// Muda a cor da seleção de texto
+::selection {
+  color: $background2;
+  background: $accent1;
+}
+::-moz-selection {
+  color: $background2;
+  background: $accent1;
+}
+::-webkit-selection {
+  color: $background2;
+  background: $accent1;
+}
+
+html, body {
   background-color: $background1;
   color: $text1;
   font-weight: 450;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 h1 {

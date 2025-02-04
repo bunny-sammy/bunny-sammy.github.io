@@ -9,6 +9,7 @@
   font-family: "Josefin Sans", system-ui, sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 1rem;
   line-height: 1.5;
 
   font-synthesis: none;
@@ -21,12 +22,5 @@
 
 // Torna o elemento main do tamanho do viewport
 main {
-  width: 100vw;
-  height: 100vh;
-}
-
-// Torna o elemento main do tamanho do viewport
-main {
-  width: 100vw;
   height: 100vh;
 }

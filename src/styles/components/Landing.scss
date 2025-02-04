@@ -3,13 +3,17 @@
 .landing {
 
     position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+
+    .landing-inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 
     img {
         width: 130px;
@@ -27,12 +31,21 @@
     }
 
     div.socials {
+        display: flex;
         border-top: 2px solid $text2;
         padding: 1rem 1.45rem 0;
         
-        display: flex;
-        gap: 0.5rem;
-        
+        a {
+            display: block;
+            cursor: pointer;
+            transition: transform 0.2s ease-in;
+            padding: 0 0.25rem;
+
+            &:hover {
+                transform: translate(0, -5px);
+            }
+        }
+
         svg {
             color: $text1;
             width: 1.8rem;
@@ -45,6 +58,7 @@
         bottom: 0.5rem;
         left: 50%;
         transform: translate(-50%, 0);
+        cursor: pointer;
 
         @media (prefers-reduced-motion: no-preference) {
             animation: scroll-down-idle 7s linear infinite;
