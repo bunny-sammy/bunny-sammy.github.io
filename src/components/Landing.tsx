@@ -37,13 +37,17 @@ export default function Landing({ style, modifier }) {
 
     return (
         <div className="landing">
-            <div className="landing-inner" style={style}>
-                <img src={profilePic}/>
+            <div className="landing-inner" style={{height: style.height, opacity: style.opacityReverse}}>
+                <img src={profilePic} style={{transform: style.picTransform}}/>
                 <div className="title">
-                    <h1>David Coelho</h1>
-                    <h2>{t('occupation')}</h2>
+                    <h1 style={{transform: style.nameTransform, filter: style.nameFilter}}>
+                        David Coelho
+                        </h1>
+                    <h2 style={{transform: style.picTransform}}>
+                        {t('occupation')}
+                    </h2>
                 </div>
-                <div className="socials">
+                <div style={{transform: style.picTransform}} className="socials">
                     {socials.map( (social, i) => (
                         <a key={i} href={social.url}>
                             {social.icon}
@@ -51,7 +55,7 @@ export default function Landing({ style, modifier }) {
                     ) )}
                 </div>
             </div>
-            <div className="scroll-icon">
+            <div style={{opacity: style.opacityReverse, transform: style.picTransform}} className="scroll-icon">
                 <ScrollIcon/>
             </div>
         </div >
