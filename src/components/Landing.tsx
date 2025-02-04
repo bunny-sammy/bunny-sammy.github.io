@@ -1,5 +1,7 @@
+import $ from "jquery";
 import { useTranslation } from "react-i18next";
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import useScrollSnap from "../hooks/useScrollSnap";
 
 import '../styles/components/Landing.scss';
 import profilePic from '../assets/images/profile.png';
@@ -11,6 +13,15 @@ import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
 export default function Landing({ style, modifier }) {
     const { i18n, t } = useTranslation();
+
+    const scrollToAbout = () => {
+        useScrollSnap(false);
+        const about = document.getElementById('about');
+
+        if (about) about.scrollIntoView({
+            behavior: 'smooth',
+        });
+    }
 
     const socials = [
         {
@@ -37,7 +48,7 @@ export default function Landing({ style, modifier }) {
 
     return (
         <div className="landing">
-            <div className="landing-inner" style={{height: style.height, opacity: style.opacityReverse}}>
+            <div className="landing-inner" style={{height: style.height, opacity: style.opacityReverse, pointerEvents: style.pointerEvents}}>
                 <img src={profilePic} style={{transform: style.picTransform}}/>
                 <div className="title">
                     <h1 style={{transform: style.nameTransform, filter: style.nameFilter}}>
@@ -55,9 +66,9 @@ export default function Landing({ style, modifier }) {
                     ) )}
                 </div>
             </div>
-            <div style={{opacity: style.opacityReverse, transform: style.picTransform}} className="scroll-icon">
+            <a onClick={scrollToAbout} style={{opacity: style.opacityReverse }} className="scroll-icon">
                 <ScrollIcon/>
-            </div>
+            </a>
         </div >
     )
 

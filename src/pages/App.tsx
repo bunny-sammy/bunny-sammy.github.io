@@ -10,8 +10,7 @@ export default function App() {
   return (
     <main>
       <Header/>
-      <div style={{'scrollSnapAlign': 'start', 'height': '60px'}}></div>
-      <p style={{'width': '100%', 'height': '100vh', 'display': 'flex', 'alignItems': 'center',}}>
+      <p id="about" style={{'scrollSnapAlign': 'start', 'width': '100%', 'height': '100vh', 'display': 'flex', 'alignItems': 'center',}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!

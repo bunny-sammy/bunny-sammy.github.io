@@ -1,8 +1,8 @@
+// Importar reset de CSS
+@use './reset';
+
 // Importar 'Josefin Sans' do Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-// Importar reset de CSS
-@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
 
 // Configuração de fonte
 :root {

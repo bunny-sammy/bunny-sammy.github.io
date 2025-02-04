@@ -18,7 +18,7 @@ html, body {
   background-color: $background1;
   color: $text1;
   font-weight: 450;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 h1 {
