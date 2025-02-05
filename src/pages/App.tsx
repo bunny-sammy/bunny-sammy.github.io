@@ -10,26 +10,44 @@ export default function App() {
   return (
     <main>
       <Header/>
-      <p id="about" style={{'scrollSnapAlign': 'start', 'width': '100%', 'height': '100vh', 'display': 'flex', 'alignItems': 'center',}}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-      </p>
-      <p style={{'width': '100%', 'height': '100vh', 'display': 'flex', 'alignItems': 'center',}}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
-      </p>
+      <section id="main" style={{'scrollSnapAlign': 'start', 'gap': '2rem', 'width': '100%', 'height': '100vh', 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'start', 'overflowY': 'scroll',}}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+        </p>
+        <p id="about">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iusto excepturi eligendi, illo consequatur vel, aspernatur nemo non, unde consequuntur cupiditate distinctio neque aperiam ratione hic rerum repudiandae nesciunt repellat!
+        </p>
+      </section>
     </main>
   )
 }

@@ -17,8 +17,7 @@ export default function Header (refs) {
         const onScroll = () => {
             setScrollY(Math.max(0, Math.min(window.scrollY, height)))
             setModifier(scrollY / height);
-
-            useScrollSnap(scrollY < height);
+            console.log(modifier);
         };
 
         window.addEventListener('scroll', onScroll, { passive: true });
@@ -34,7 +33,8 @@ export default function Header (refs) {
         picTransform: `scale(${Math.max(0.2, 1-modifier)}, ${Math.max(0.2, 1-modifier)})`,
         nameTransform: `scale(${Math.max(0.6, 1-modifier)}, ${Math.max(0.6, 1-modifier)}) translate(-${modifier > 0.1 ? (width * (0.5 * modifier) + 90*modifier) : 0}px, 0)`,
         nameFilter: `brightness(${1-modifier}) invert(${modifier})`,
-        pointerEvents: modifier > 0.95 ? 'none' : 'auto',
+        pointerEvents: modifier >= 0.9 ? 'none' : 'auto',
+        visibility: modifier >= 0.9 ? 'hidden' : 'visible',
     }
 
     return (

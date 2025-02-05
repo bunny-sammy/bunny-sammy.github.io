@@ -18,6 +18,11 @@ export default function Landing({ style, modifier }) {
         useScrollSnap(false);
         const about = document.getElementById('about');
 
+        // window.scrollBy({
+        //     top: 1000,
+        //     behavior: "smooth",
+        // });
+
         if (about) about.scrollIntoView({
             behavior: 'smooth',
         });
@@ -47,18 +52,18 @@ export default function Landing({ style, modifier }) {
     ]
 
     return (
-        <div className="landing">
-            <div className="landing-inner" style={{height: style.height, opacity: style.opacityReverse, pointerEvents: style.pointerEvents}}>
-                <img src={profilePic} style={{transform: style.picTransform}}/>
+        <section className="landing">
+            <div className="landing-inner" style={{ height: style.height, opacity: style.opacityReverse, pointerEvents: style.pointerEvents }}>
+                <img src={profilePic} style={{ transform: style.picTransform }}/>
                 <div className="title">
                     <h1 style={{transform: style.nameTransform, filter: style.nameFilter}}>
                         David Coelho
                         </h1>
-                    <h2 style={{transform: style.picTransform}}>
+                    <h2 style={{ transform: style.picTransform }}>
                         {t('occupation')}
                     </h2>
                 </div>
-                <div style={{transform: style.picTransform}} className="socials">
+                <div style={{ transform: style.picTransform }} className="socials">
                     {socials.map( (social, i) => (
                         <a key={i} href={social.url}>
                             {social.icon}
@@ -66,10 +71,10 @@ export default function Landing({ style, modifier }) {
                     ) )}
                 </div>
             </div>
-            <a onClick={scrollToAbout} style={{opacity: style.opacityReverse }} className="scroll-icon">
+            <a onClick={scrollToAbout} style={{ opacity: style.opacityReverse, pointerEvents: style.pointerEvents }} className="scroll-icon">
                 <ScrollIcon/>
             </a>
-        </div >
+        </section >
     )
 
 }
