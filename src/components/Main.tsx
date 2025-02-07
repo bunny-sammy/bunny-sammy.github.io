@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
-import { useState, useRef } from 'react'
+// import { useTranslation } from "react-i18next";
+// import { useState, useRef } from 'react'
 
 import '../styles/components/Main.scss';
 
