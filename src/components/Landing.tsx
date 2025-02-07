@@ -14,18 +14,14 @@ import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 export default function Landing({ style, modifier }) {
     const { i18n, t } = useTranslation();
 
-    const scrollToAbout = () => {
+    const scrollToMain = () => {
         useScrollSnap(false);
-        const about = document.getElementById('about');
+        const main = document.querySelector('main');
 
-        // window.scrollBy({
-        //     top: 1000,
-        //     behavior: "smooth",
-        // });
-
-        if (about) about.scrollIntoView({
+        if (main) main.scrollIntoView({
             behavior: 'smooth',
         });
+        setTimeout(() => useScrollSnap(true), 500);
     }
 
     const socials = [
@@ -71,7 +67,7 @@ export default function Landing({ style, modifier }) {
                     ) )}
                 </div>
             </div>
-            <a onClick={scrollToAbout} style={{ opacity: style.opacityReverse, pointerEvents: style.pointerEvents }} className="scroll-icon">
+            <a onClick={scrollToMain} style={{ opacity: style.opacityReverse, pointerEvents: style.pointerEvents }} className="scroll-icon">
                 <ScrollIcon/>
             </a>
         </section >

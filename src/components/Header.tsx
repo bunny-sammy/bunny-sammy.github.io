@@ -31,7 +31,7 @@ export default function Header (refs) {
         userOpacity: modifier > 0.75 ? modifier : 0,
         userTransform: `translate(${width * (0.5 * (1-modifier)) - 65*(1-modifier)}px, ${10 * (1-modifier)}px)`,
         picTransform: `scale(${Math.max(0.2, 1-modifier)}, ${Math.max(0.2, 1-modifier)})`,
-        nameTransform: `scale(${Math.max(0.6, 1-modifier)}, ${Math.max(0.6, 1-modifier)}) translate(-${modifier > 0.1 ? (width * (0.5 * modifier) + 90*modifier) : 0}px, 0)`,
+        nameTransform: `scale(${Math.max(0.6, 1-modifier)}, ${Math.max(0.6, 1-modifier)}) translate(-${modifier > 0.01 ? (width * (0.5 * modifier) + 90*modifier) : 0}px, 0)`,
         nameFilter: `brightness(${1-modifier}) invert(${modifier})`,
         pointerEvents: modifier >= 0.9 ? 'none' : 'auto',
         visibility: modifier >= 0.9 ? 'hidden' : 'visible',

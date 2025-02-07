@@ -20,11 +20,6 @@
   scroll-behavior: smooth;
 }
 
-// Torna o elemento main do tamanho do viewport
-main {
-  height: 100vh;
-}
-
 *::-webkit-scrollbar {
   display: none;
 }
