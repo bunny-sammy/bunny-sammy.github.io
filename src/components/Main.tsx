@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import '../styles/components/Main.scss';
 
 export default function Main () {
-    const { i18n, t } = useTranslation();
+    // const { i18n, t } = useTranslation();
 
     return (
         <main>

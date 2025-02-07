@@ -11,7 +11,12 @@ import ItchIcon from '../assets/icons/landing_itch.svg?react';
 import IgIcon from '../assets/icons/landing_instagram.svg?react';
 import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
-export default function Landing({ style, modifier }) {
+interface LandingProps {
+    style: React.CSSProperties;
+    modifier?: string;
+}
+
+export default function Landing({ style, modifier }: LandingProps) {
     const { i18n, t } = useTranslation();
 
     const scrollToMain = () => {

@@ -6,7 +6,7 @@ import useScrollSnap from "../hooks/useScrollSnap";
 import '../styles/components/Header.scss';
 import Landing from "./Landing";
 
-export default function Header (refs) {
+export default function Header () {
     // const { i18n, t } = useTranslation();
 
     const [scrollY, setScrollY] = useState(0);
@@ -17,7 +17,6 @@ export default function Header (refs) {
         const onScroll = () => {
             setScrollY(Math.max(0, Math.min(window.scrollY, height)))
             setModifier(scrollY / height);
-            console.log(modifier);
         };
 
         window.addEventListener('scroll', onScroll, { passive: true });
