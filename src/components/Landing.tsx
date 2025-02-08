@@ -9,25 +9,14 @@ import LinkedIcon from '../assets/icons/landing_linkedin.svg?react';
 import GitIcon from '../assets/icons/landing_github.svg?react';
 import ItchIcon from '../assets/icons/landing_itch.svg?react';
 import IgIcon from '../assets/icons/landing_instagram.svg?react';
-import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
 interface LandingProps {
     style: React.CSSProperties;
-    modifier?: string;
+    modifier?: number;
 }
 
-export default function Landing({ style, modifier }: LandingProps) {
+export default function Landing({ style, modifier, }: LandingProps) {
     const { i18n, t } = useTranslation();
-
-    const scrollToMain = () => {
-        useScrollSnap(false);
-        const main = document.querySelector('main');
-
-        if (main) main.scrollIntoView({
-            behavior: 'smooth',
-        });
-        setTimeout(() => useScrollSnap(true), 500);
-    }
 
     const socials = [
         {
@@ -72,9 +61,6 @@ export default function Landing({ style, modifier }: LandingProps) {
                     ) )}
                 </div>
             </div>
-            <a onClick={scrollToMain} style={{ opacity: style.opacityReverse, pointerEvents: style.pointerEvents }} className="scroll-icon">
-                <ScrollIcon/>
-            </a>
         </section >
     )
 

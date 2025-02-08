@@ -4,7 +4,7 @@
 
     display: flex;
     align-items: end;
-    height: 100vh;
+    height: 100dvh;
 
     .landing-inner {
         display: flex;
@@ -22,6 +22,8 @@
         max-width: 50vw;
         border-radius: 100%;
         border: 2px solid $text1;
+
+        pointer-events: none;
     }
 
     div.title {
@@ -53,61 +55,5 @@
             width: 1.8rem;
             height: 1.8rem;
         }
-    }
-
-    .scroll-icon {
-        cursor: pointer;
-        position: fixed;
-        bottom: 0.5rem;
-        left: 50%;
-        transform: translate(-50%, 0);
-
-        @media (prefers-reduced-motion: no-preference) {
-            animation: scroll-down-idle 7s linear infinite;
-        }
-
-        svg {
-            color: $text1;
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-    }
-}
-
-@keyframes scroll-down-idle {
-    80% {
-        transform: translate(-50%, 0);
-    }
-
-    85% {
-        transform: translate(-50%, -0.75rem);
-    }
-
-    87% {
-        transform: translate(-50%, -0.8rem);
-    }
-
-    89% {
-        transform: translate(-50%, 0.3rem);
-    }
-
-    90% {
-        transform: translate(-50%, 0);
-    }
-
-    95% {
-        transform: translate(-50%, -0.75rem);
-    }
-
-    97% {
-        transform: translate(-50%, -0.8rem);
-    }
-
-    99% {
-        transform: translate(-50%, 0.3rem);
-    }
-
-    100% {
-        transform: translate(-50%, 0);
     }
 }

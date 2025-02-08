@@ -7,10 +7,78 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 0.5rem;
+    padding: 0 2.5rem;
     align-items: center;
     background-color: $accent1;
     color: $text1;
 
     scroll-snap-align: start;
+    
+    @media (max-width: 768px) {
+        padding: 0 1.25rem;
+    }
+
+    h2 {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+}
+
+.scroll-icon {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation: scroll-down-idle 7s linear infinite;
+    }
+
+    svg {
+        color: $text1;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@keyframes scroll-down-idle {
+    80% {
+        transform: translate(-50%, 0);
+    }
+
+    85% {
+        transform: translate(-50%, -0.75rem);
+    }
+
+    87% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    89% {
+        transform: translate(-50%, 0.3rem);
+    }
+
+    90% {
+        transform: translate(-50%, 0);
+    }
+
+    95% {
+        transform: translate(-50%, -0.75rem);
+    }
+
+    97% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    99% {
+        transform: translate(-50%, 0.3rem);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
 }

@@ -5,10 +5,13 @@ import useScrollSnap from "../hooks/useScrollSnap";
 
 import '../styles/components/Header.scss';
 import Landing from "./Landing";
+import Navbar from "./Navbar";
+import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
 export default function Header () {
     // const { i18n, t } = useTranslation();
 
+    const finalHeight = 60;
     const [scrollY, setScrollY] = useState(0);
     const [modifier, setModifier] = useState(0);
     const {width, height} = useWindowDimensions();
@@ -19,12 +22,40 @@ export default function Header () {
             setModifier(scrollY / height);
         };
 
+        const endScroll = () => {
+            if (modifier > 0.5) {
+                scrollTo(0, height);
+            } else {
+                scrollTo(0, 0);
+            }
+        }
+
+        window.addEventListener('load', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scrollend', endScroll, { passive: true });
+        return () => {
+            window.removeEventListener('load', onScroll);
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('scrollend', endScroll);
+        };
     }, [scrollY]);
 
+    const scrollToMain = () => {
+        useScrollSnap(false);
+        const main = document.querySelector('main');
+        
+        if (main) main.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+        setTimeout(() => {
+            useScrollSnap(true)
+            window.dispatchEvent(new Event('scrollend'));
+        }, 500);
+    }
+
     const dynamicStyles = {
-        height: `${Math.max(60, height * (1-modifier))}px`,
+        height: `${Math.max(finalHeight, height * (1-modifier))}px`,
         opacityReverse: 1-modifier,
         opacity: modifier,
         userOpacity: modifier > 0.75 ? modifier : 0,
@@ -44,7 +75,13 @@ export default function Header () {
                 </h2>
             </header>
 
-            <Landing style={dynamicStyles} modifier={modifier}/>
+            <Navbar height={finalHeight}/>
+
+            <Landing style={dynamicStyles} modifier={modifier} scrollFunction={scrollToMain}/>
+
+            <button onClick={scrollToMain} style={{ opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
+                <ScrollIcon/>
+            </button>
         </>
     )
 }
