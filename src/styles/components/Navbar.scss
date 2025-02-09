@@ -28,8 +28,26 @@ nav {
         gap: 2rem;
         padding: 0 2.5rem;
 
-        li {
+        li:not(.icons) {
             cursor: pointer;
+        }
+        li.icons {
+            height: 100%;
+            display: flex;
+            
+            button {
+                height: var(--height);
+                width: var(--height);
+                padding: 0.8rem;
+                color: inherit;
+                z-index: 60;
+                
+                svg {
+                    cursor: pointer;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -45,8 +63,6 @@ nav {
             color: inherit;
 
             &.open {
-                pointer-events: none;
-
                 @media (prefers-reduced-motion: no-preference) {
                     &.animate {
                         animation: rotate-right 0.5s forwards 1;
@@ -94,11 +110,14 @@ nav {
 
             margin-top: -0.1rem;
             gap: 1.75rem;
-            padding: 1.75rem 0.75rem;
+            padding: 0;
 
-            li {
+            li:not(.icons) {
                 width: 100%;
                 padding: 0 0.5rem;
+            }
+            li.icons {
+                height: unset;
             }
         }
         ul.open {

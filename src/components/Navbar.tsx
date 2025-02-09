@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import '../styles/components/Navbar.scss';
 import MenuIcon from '../assets/icons/navbar_menu.svg?react';
 import CloseIcon from '../assets/icons/navbar_close.svg?react';
+import ShareIcon from '../assets/icons/navbar_share.svg?react';
+import LangIcon from '../assets/icons/navbar_lang.svg?react';
 import useScrollIntoView from "../hooks/useScrollIntoView";
 
 interface NavbarProps {
@@ -11,7 +13,7 @@ interface NavbarProps {
 }
 
 export default function Navbar ({height}: NavbarProps) {
-    // const { i18n, t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     const [ menuOpen, setMenuOpen ] = useState<boolean>(false);
     const [ animate, setAnimate ] = useState<string>('');
@@ -42,21 +44,46 @@ export default function Navbar ({height}: NavbarProps) {
     }
 
     const blurMenu = (event: React.FocusEvent<HTMLUListElement>) => {
-        setMenuOpen(false);
+        // setMenuOpen(false);
+    }
+
+    const toggleLanguage = () => {
+        if (i18n.language == "en") {
+            i18n.changeLanguage("pt-BR");
+        } else {
+            i18n.changeLanguage("en");
+        }
+    }
+
+    const handleShare = () => {
+        const shareData = {
+            title: "David Coelho | Portfolio",
+            text: "Desenvolvedor Web Frontend",
+            url: "https://bunny-sammy.github.io",
+        };
+        if (navigator.canShare(shareData)) {
+            navigator.share(shareData);
+        } else {
+            navigator.clipboard.writeText(shareData.url);
+        }
     }
 
     const links = [
         {
+            label: 'Início',
+            query: '',
+        },
+        {
             label: 'Sobre Mim',
-            id: '[data-section="about"]',
+            query: '[data-section="about"]',
         },
         {
             label: 'Projetos',
-            id: '[data-section="projects"]',
+            query: '[data-section="projects"]',
         },
         {
             label: 'Contato',
-            id: '[data-section="contact"]',
+            query: '[data-section="contact"]',
         },
     ]
 
@@ -68,8 +95,16 @@ export default function Navbar ({height}: NavbarProps) {
             </button>
             <ul ref={menuRef} tabIndex={0} className={menuOpen ? "open" : ""} onBlur={blurMenu}>
                 {links.map( (link, i) => (
-                    <li key={i} onClick={()=>(useScrollIntoView(link.id))}>{link.label}</li>
+                    <li key={i} onClick={()=>(useScrollIntoView(link.query))}>{link.label}</li>
                 ) )}
+                <li className="icons">
+                    <button onClick={handleShare}>
+                        <ShareIcon/>
+                    </button>
+                    <button onClick={toggleLanguage}>
+                        <LangIcon/>
+                    </button>
+                </li>
             </ul>
         </nav>
     )
