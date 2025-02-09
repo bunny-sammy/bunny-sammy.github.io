@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import '../styles/components/Navbar.scss';
 import MenuIcon from '../assets/icons/navbar_menu.svg?react';
 import CloseIcon from '../assets/icons/navbar_close.svg?react';
+import useScrollIntoView from "../hooks/useScrollIntoView";
 
 interface NavbarProps {
     height: number;
@@ -26,8 +27,13 @@ export default function Navbar ({height}: NavbarProps) {
             menuRef.current?.focus();
         }
 
+        const main = document.querySelector('main');
         window.addEventListener('scroll', forceCloseOnScroll);
-        return () => window.removeEventListener('scroll', forceCloseOnScroll);
+        main?.addEventListener('scroll', forceCloseOnScroll);
+        return () => {
+            window.removeEventListener('scroll', forceCloseOnScroll);
+            main?.removeEventListener('scroll', forceCloseOnScroll);
+        };
     }, [menuOpen])
 
     const toggleMenu = (event: React.MouseEvent<HTMLButtonElement>) => {    
@@ -42,15 +48,15 @@ export default function Navbar ({height}: NavbarProps) {
     const links = [
         {
             label: 'Sobre Mim',
-            id: '#about',
+            id: '[data-section="about"]',
         },
         {
             label: 'Projetos',
-            id: '#projects',
+            id: '[data-section="projects"]',
         },
         {
             label: 'Contato',
-            id: '#contact',
+            id: '[data-section="contact"]',
         },
     ]
 
@@ -62,7 +68,7 @@ export default function Navbar ({height}: NavbarProps) {
             </button>
             <ul ref={menuRef} tabIndex={0} className={menuOpen ? "open" : ""} onBlur={blurMenu}>
                 {links.map( (link, i) => (
-                    <li key={i}>{link.label}</li>
+                    <li key={i} onClick={()=>(useScrollIntoView(link.id))}>{link.label}</li>
                 ) )}
             </ul>
         </nav>

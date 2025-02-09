@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from 'react';
 import useWindowDimensions from "../hooks/useWindowDimensions";
-import useScrollSnap from "../hooks/useScrollSnap";
+import useScrollIntoView from "../hooks/useScrollIntoView";
 
 import '../styles/components/Header.scss';
 import Landing from "./Landing";
@@ -40,20 +40,6 @@ export default function Header () {
         };
     }, [scrollY]);
 
-    const scrollToMain = () => {
-        useScrollSnap(false);
-        const main = document.querySelector('main');
-        
-        if (main) main.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-        setTimeout(() => {
-            useScrollSnap(true)
-            window.dispatchEvent(new Event('scrollend'));
-        }, 500);
-    }
-
     const dynamicStyles = {
         height: `${Math.max(finalHeight, height * (1-modifier))}px`,
         opacityReverse: 1-modifier,
@@ -77,9 +63,9 @@ export default function Header () {
 
             <Navbar height={finalHeight}/>
 
-            <Landing style={dynamicStyles} modifier={modifier} scrollFunction={scrollToMain}/>
+            <Landing style={dynamicStyles} modifier={modifier} scrollFunction={()=>(useScrollIntoView('main'))}/>
 
-            <button onClick={scrollToMain} style={{ opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
+            <button onClick={()=>(useScrollIntoView('main'))} style={{ opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
                 <ScrollIcon/>
             </button>
         </>
