@@ -1,6 +1,5 @@
-import $ from "jquery";
 import { useTranslation } from "react-i18next";
-import { useState, useRef } from 'react'
+import { useState, useRef, memo } from 'react'
 
 import '../styles/components/Landing.scss';
 import profilePic from '../assets/images/profile.png';
@@ -14,7 +13,7 @@ interface LandingProps {
     modifier?: number;
 }
 
-export default function Landing({ style, modifier, }: LandingProps) {
+export default memo(function Landing({ style, modifier, }: LandingProps) {
     const { i18n, t } = useTranslation();
 
     const socials = [
@@ -63,4 +62,4 @@ export default function Landing({ style, modifier, }: LandingProps) {
         </section >
     )
 
-}
+})

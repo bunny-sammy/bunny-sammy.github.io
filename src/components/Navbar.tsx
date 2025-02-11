@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
 
 import '../styles/components/Navbar.scss';
 import MenuIcon from '../assets/icons/navbar_menu.svg?react';
@@ -12,7 +12,7 @@ interface NavbarProps {
     height: number;
 }
 
-export default function Navbar ({height}: NavbarProps) {
+export default memo(function Navbar ({height}: NavbarProps) {
     const { i18n, t } = useTranslation();
 
     const [ menuOpen, setMenuOpen ] = useState<boolean>(false);
@@ -108,4 +108,4 @@ export default function Navbar ({height}: NavbarProps) {
             </ul>
         </nav>
     )
-}
+})

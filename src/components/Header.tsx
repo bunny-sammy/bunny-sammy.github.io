@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, memo } from 'react';
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import useScrollIntoView from "../hooks/useScrollIntoView";
 
@@ -8,12 +8,12 @@ import Landing from "./Landing";
 import Navbar from "./Navbar";
 import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 
-export default function Header () {
+export default memo(function Header () {
     // const { i18n, t } = useTranslation();
 
     const finalHeight = 60; // Final height of the header. Passed down to all components related to it
 
-    const [prevScrollY, setPrevScrollY] = useState<number>(0)
+    const prevScrollY = useRef<number>(0);
     const [scrollY, setScrollY] = useState<number>(0);
     const [modifier, setModifier] = useState<number>(0);
     const {width, height} = useWindowDimensions();
@@ -21,11 +21,12 @@ export default function Header () {
     useEffect(() => {
         const onScroll = () => {
             setScrollY(window.scrollY);
-            setModifier(Math.max(0, Math.min(window.scrollY, height)) / height);
+            const modifierValue = Math.max(0, Math.min(window.scrollY, height)) / height;
+            setModifier(scrollY >= height ? 1 : modifierValue);
         };
 
         const endScroll = () => {   
-            if (scrollY < prevScrollY) {
+            if (scrollY < prevScrollY.current) {
                 // Going up
                 if (modifier < 0.8) {
                     scrollTo(0, 0);
@@ -41,7 +42,7 @@ export default function Header () {
                 }
             }
 
-            setPrevScrollY(scrollY);
+            prevScrollY.current = scrollY;
         }
 
         window.addEventListener('load', onScroll);
@@ -65,6 +66,7 @@ export default function Header () {
         nameFilter: `brightness(${1-modifier}) invert(${modifier})`,
         pointerEvents: modifier >= 0.9 ? 'none' : 'auto',
         visibility: modifier >= 0.9 ? 'hidden' : 'visible',
+        display: modifier > 0.9 ? 'none' : 'block',
     }
 
     return (
@@ -79,9 +81,9 @@ export default function Header () {
 
             <Landing style={dynamicStyles} modifier={modifier} scrollFunction={()=>(useScrollIntoView('main'))}/>
 
-            <button onClick={()=>(useScrollIntoView('main'))} style={{ opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
+            <button onClick={()=>(useScrollIntoView('main'))} style={{ display:dynamicStyles.display, opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
                 <ScrollIcon/>
             </button>
         </section>
     )
-}
+})
