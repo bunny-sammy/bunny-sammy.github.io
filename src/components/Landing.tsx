@@ -1,7 +1,6 @@
 import $ from "jquery";
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from 'react'
-import useScrollSnap from "../hooks/useScrollSnap";
 
 import '../styles/components/Landing.scss';
 import profilePic from '../assets/images/profile.png';

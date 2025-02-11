@@ -11,23 +11,37 @@ import ScrollIcon from '../assets/icons/landing_scroll.svg?react';
 export default function Header () {
     // const { i18n, t } = useTranslation();
 
-    const finalHeight = 60;
-    const [scrollY, setScrollY] = useState(0);
-    const [modifier, setModifier] = useState(0);
+    const finalHeight = 60; // Final height of the header. Passed down to all components related to it
+
+    const [prevScrollY, setPrevScrollY] = useState<number>(0)
+    const [scrollY, setScrollY] = useState<number>(0);
+    const [modifier, setModifier] = useState<number>(0);
     const {width, height} = useWindowDimensions();
 
     useEffect(() => {
         const onScroll = () => {
-            setScrollY(Math.max(0, Math.min(window.scrollY, height)))
-            setModifier(scrollY / height);
+            setScrollY(window.scrollY);
+            setModifier(Math.max(0, Math.min(window.scrollY, height)) / height);
         };
 
-        const endScroll = () => {
-            if (modifier > 0.5) {
-                scrollTo(0, height);
+        const endScroll = () => {   
+            if (scrollY < prevScrollY) {
+                // Going up
+                if (modifier < 0.8) {
+                    scrollTo(0, 0);
+                } else {
+                    if (scrollY < height) scrollTo(0, height);
+                }
             } else {
-                scrollTo(0, 0);
+                // Going down
+                if (modifier < 0.2) {
+                    scrollTo(0, 0);
+                } else {
+                    if (scrollY < height) scrollTo(0, height);
+                }
             }
+
+            setPrevScrollY(scrollY);
         }
 
         window.addEventListener('load', onScroll);
@@ -54,7 +68,7 @@ export default function Header () {
     }
 
     return (
-        <>
+        <section className="landing-container">
             <header style={{height: dynamicStyles.height, opacity: dynamicStyles.opacity}}>
                 <h2 style={{transform: dynamicStyles.userTransform, opacity: dynamicStyles.userOpacity, filter: dynamicStyles.nameFilter}}>
                     bunnysammy_
@@ -68,6 +82,6 @@ export default function Header () {
             <button onClick={()=>(useScrollIntoView('main'))} style={{ opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
                 <ScrollIcon/>
             </button>
-        </>
+        </section>
     )
 }
