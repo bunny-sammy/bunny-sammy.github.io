@@ -3,7 +3,7 @@
 
 import '../styles/components/App.scss'
 import Header from "../components/Header";
-import Main from "../components/Main";
+import About from "../components/About";
 
 export default function App() {
   // const { i18n, t } = useTranslation();
@@ -11,7 +11,9 @@ export default function App() {
   return (
     <>
       <Header/>
-      <Main/>
+      <main>
+        <About/>
+      </main>
     </>
   )
 }

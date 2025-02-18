@@ -11,7 +11,7 @@
   font-style: normal;
   font-size: 1.15rem;
   line-height: 1.2;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +19,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
+  width: 100vw;
+  overflow: none;
 }
 
 *::-webkit-scrollbar {

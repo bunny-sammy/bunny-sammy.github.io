@@ -1,0 +1,38 @@
+@use "../abstract/_variables.scss" as *;
+
+div.square-list {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $background2;
+
+    padding: 1.5rem;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 2rem;
+
+    p {
+        color: $text2;
+        font-size: 0.85rem;
+        margin-top: -0.05rem;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        height: 100%;
+        gap: 0 1.5rem;
+
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: $text2;
+            margin: 0 0.5rem;
+        }
+    }
+
+}
