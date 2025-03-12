@@ -7,11 +7,11 @@ div.square-list {
     justify-content: space-between;
     background-color: $background2;
 
-    padding: 1.5rem;
+    padding: 0.75rem;
     width: 200px;
     height: 200px;
 
-    border-radius: 2rem;
+    border-radius: 1rem;
 
     p {
         color: $text2;
@@ -19,12 +19,19 @@ div.square-list {
         margin-top: -0.05rem;
     }
 
+    div:has(ul) {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     ul {
         display: flex;
         flex-wrap: wrap;
 
-        height: 100%;
+        height: fit-content;
         gap: 0 1.5rem;
+        font-size: 0.85rem;
 
         justify-content: center;
         align-items: center;
@@ -32,6 +39,10 @@ div.square-list {
         span {
             color: $text2;
             margin: 0 0.5rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
         }
     }
 

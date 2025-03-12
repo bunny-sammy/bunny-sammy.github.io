@@ -45,3 +45,7 @@ h2 {
 p, h1, h2, h3 {
   margin: 0.25rem 0;
 }
+
+img {
+  pointer-events: none;
+}

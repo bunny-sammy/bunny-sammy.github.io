@@ -18,7 +18,7 @@ export default function About () {
                     Olá! Eu sou David Coelho, estudante de Ciência da Computação, aspirante a <span>desenvolvedor</span> e <span>artista</span> por hobby de longa data.
                 </p>
                 <p>
-                    Atualmente estou me aperfeiçoando no devenvolvimento web frontend, mas tenho experiência em outras áreas criativas como desenvolvimento de jogos e ilustração.
+                    Atualmente estou me aperfeiçoando no devenvolvimento web frontend e tenho experiência em outras áreas criativas como desenvolvimento de jogos e ilustração.
                 </p>
                 <div className="lists-container">
                     <SquareList

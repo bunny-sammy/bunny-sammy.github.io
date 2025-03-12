@@ -10,15 +10,19 @@ export default function SectionTitle ({title, subtitle, list}: SectionTitleProps
 
     return (
         <div className="square-list">
-            <h3>{title}</h3>
-            {subtitle && <p>{subtitle}</p>}
-            <ul>
-                {list.map((item, index) => (
-                    <>
-                        <li key={index}>{item}</li>
-                    </>
-                ))}
-            </ul>
+            <div>
+                <h3>{title}</h3>
+                {subtitle && <p>{subtitle}</p>}
+            </div>
+            <div>
+                <ul>
+                    {list.map((item, index) => (
+                        <>
+                            <li key={index}>{item}</li>
+                        </>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
