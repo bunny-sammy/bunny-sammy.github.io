@@ -7,11 +7,15 @@ div.square-list {
     justify-content: space-between;
     background-color: $background2;
 
-    padding: 0.75rem;
+    padding: 1rem;
     width: 200px;
     height: 200px;
 
     border-radius: 1rem;
+
+    h3 {
+        margin-top: -0.1rem;
+    }
 
     p {
         color: $text2;

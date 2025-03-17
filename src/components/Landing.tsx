@@ -48,7 +48,7 @@ export default memo(function Landing({ style, modifier, }: LandingProps) {
                         David Coelho
                         </h1>
                     <h2 style={{ transform: style.picTransform }}>
-                        {t('occupation')}
+                        {t('landing.occupation')}
                     </h2>
                 </div>
                 <div style={{ transform: style.picTransform }} className="socials">

@@ -17,9 +17,7 @@ export default function SectionTitle ({title, subtitle, list}: SectionTitleProps
             <div>
                 <ul>
                     {list.map((item, index) => (
-                        <>
-                            <li key={index}>{item}</li>
-                        </>
+                        <li key={index}>{item}</li>
                     ))}
                 </ul>
             </div>

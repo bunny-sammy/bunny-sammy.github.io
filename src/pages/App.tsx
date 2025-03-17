@@ -4,6 +4,7 @@
 import '../styles/components/App.scss'
 import Header from "../components/Header";
 import About from "../components/About";
+import Projects from '../components/Projects';
 
 export default function App() {
   // const { i18n, t } = useTranslation();
@@ -13,6 +14,7 @@ export default function App() {
       <Header/>
       <main>
         <About/>
+        <Projects/>
       </main>
     </>
   )

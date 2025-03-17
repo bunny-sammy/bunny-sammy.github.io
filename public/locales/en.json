@@ -1,3 +1,17 @@
 {
-    "occupation": "Frontend Developer"
+    "landing": {        
+        "occupation": "Frontend Developer"
+    },
+    "about": {
+        "title": "About Me"
+    },
+    "projects": {
+        "title": "Projects"        
+    },
+    "projectdata": {
+        "tavern-talk": {
+            "name": "Tavern Talk",
+            "description": "Generate tabletop RPG character sheets through a friendly chat"
+        }
+    }
 }

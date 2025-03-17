@@ -1,0 +1,17 @@
+{
+    "projects": [
+        {
+            "key":"tavern-talk",
+            "name":"Tavern Talk",
+            "category":"app",
+            "tags":[
+                "next", "react", "ts", "scss", "mongodb"
+            ],
+            "description":"Generate tabletop RPG character sheets through a friendly chat",
+            "actions":{
+                "access":"https://tavern-talk.vercel.app/",
+                "code":"https://github.com/bunny-sammy/tavern-talk"
+            }
+        }
+    ]
+}

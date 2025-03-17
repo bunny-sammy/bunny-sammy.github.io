@@ -2,15 +2,15 @@
 
 // Muda a cor da seleção de texto
 ::selection {
-  color: $background2;
+  color: $text3;
   background: $selection;
 }
 ::-moz-selection {
-  color: $background2;
+  color: $text3;
   background: $selection;
 }
 ::-webkit-selection {
-  color: $background2;
+  color: $text3;
   background: $selection;
 }
 
