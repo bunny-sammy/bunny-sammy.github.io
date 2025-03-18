@@ -8,12 +8,7 @@ import GitIcon from '../assets/icons/landing_github.svg?react';
 import ItchIcon from '../assets/icons/landing_itch.svg?react';
 import IgIcon from '../assets/icons/landing_instagram.svg?react';
 
-interface LandingProps {
-    style: React.CSSProperties;
-    modifier?: number;
-}
-
-export default memo(function Landing({ style, modifier, }: LandingProps) {
+export default memo(function Landing() {
     const { i18n, t } = useTranslation();
 
     const socials = [
@@ -41,17 +36,13 @@ export default memo(function Landing({ style, modifier, }: LandingProps) {
 
     return (
         <section className="landing">
-            <div className="landing-inner" style={{ height: style.height, opacity: style.opacityReverse, pointerEvents: style.pointerEvents }}>
-                <img src={profilePic} style={{ transform: style.picTransform }}/>
+            <div className="landing-inner">
+                <img src={profilePic}/>
                 <div className="title">
-                    <h1 style={{transform: style.nameTransform, filter: style.nameFilter}}>
-                        David Coelho
-                        </h1>
-                    <h2 style={{ transform: style.picTransform }}>
-                        {t('landing.occupation')}
-                    </h2>
+                    <h1>David Coelho</h1>
+                    <h2>{t('landing.occupation')}</h2>
                 </div>
-                <div style={{ transform: style.picTransform }} className="socials">
+                <div className="socials">
                     {socials.map( (social, i) => (
                         <a key={i} href={social.url}>
                             {social.icon}

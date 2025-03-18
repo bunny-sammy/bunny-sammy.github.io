@@ -56,32 +56,30 @@ export default memo(function Header () {
     }, [scrollY]);
 
     const dynamicStyles = {
-        height: `${Math.max(finalHeight, height * (1-modifier))}px`,
-        opacityReverse: 1-modifier,
-        opacity: modifier,
-        userOpacity: modifier > 0.75 ? modifier : 0,
-        userTransform: `translate(${width * (0.5 * (1-modifier)) - 65*(1-modifier)}px, ${10 * (1-modifier)}px)`,
-        picTransform: `scale(${Math.max(0.2, 1-modifier)}, ${Math.max(0.2, 1-modifier)})`,
-        nameTransform: `scale(${Math.max(0.6, 1-modifier)}, ${Math.max(0.6, 1-modifier)}) translate(-${modifier > 0.01 ? (width * (0.5 * modifier) + 90*modifier) : 0}px, 0)`,
-        nameFilter: `brightness(${1-modifier}) invert(${modifier})`,
-        pointerEvents: modifier >= 0.9 ? 'none' : 'auto',
-        visibility: modifier >= 0.9 ? 'hidden' : 'visible',
-        display: modifier > 0.9 ? 'none' : 'block',
-    }
+        "--modifier": modifier,
+        "--modifier-px": `${modifier}px`,
+        "--width": `${width}px`,
+        "--height": `${height}px`,
+        "--final-height": `${finalHeight}px`,
+
+        "--user-opacity": modifier > 0.75 ? modifier : 0,
+        "--user-transform": `translate(${width * (0.5 * (1-modifier)) - 65*(1-modifier)}px, ${10 * (1-modifier)}px)`,
+        "--pic-transform": `scale(${Math.max(0.2, 1-modifier)}, ${Math.max(0.2, 1-modifier)})`,
+        "--name-transform": `scale(${Math.max(0.6, 1-modifier)}, ${Math.max(0.6, 1-modifier)}) translate(-${modifier > 0.01 ? (width * (0.5 * modifier) + 90*modifier) : 0}px, 0)`,
+        "--scroll-display": modifier > 0.9 ? 'none' : 'block',
+        "--pointer-events": modifier >= 0.9 ? 'none' : 'auto',
+    } as React.CSSProperties;
 
     return (
-        <section className="landing-container">
-            <header style={{height: dynamicStyles.height, opacity: dynamicStyles.opacity}}>
-                <h2 style={{transform: dynamicStyles.userTransform, opacity: dynamicStyles.userOpacity, filter: dynamicStyles.nameFilter}}>
-                    bunnysammy_
-                </h2>
+        <section className="landing-container" style={dynamicStyles}>
+            <header>
+                <h2>bunnysammy_</h2>
             </header>
 
             <Navbar height={finalHeight}/>
+            <Landing/>
 
-            <Landing style={dynamicStyles} modifier={modifier} scrollFunction={()=>(useScrollIntoView('main'))}/>
-
-            <button onClick={()=>(useScrollIntoView('main'))} style={{ display:dynamicStyles.display, opacity: dynamicStyles.opacityReverse, pointerEvents: dynamicStyles.pointerEvents }} className="scroll-icon">
+            <button className="scroll-icon" onClick={()=>(useScrollIntoView('main'))}>
                 <ScrollIcon/>
             </button>
         </section>

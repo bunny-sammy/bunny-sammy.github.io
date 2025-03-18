@@ -12,6 +12,9 @@ header {
     background-color: $accent2;
     color: $text1;
 
+    height: max(var(--final-height), calc(var(--height) * (1 - var(--modifier))));
+    opacity: var(--modifier);
+
     scroll-snap-align: start;
     
     @media (max-width: 768px) {
@@ -24,15 +27,23 @@ header {
         -moz-user-select: none;
         -o-user-select: none;
         user-select: none;
+
+        transform: var(--user-transform);
+        opacity: var(--user-opacity);
+        filter: brightness(calc(1 - var(--modifier))) invert(var(--modifier));
     }
 }
 
 .scroll-icon {
+    display: var(--scroll-display);
     cursor: pointer;
     position: fixed;
     bottom: 0.5rem;
     left: 50%;
     transform: translate(-50%, 0);
+
+    opacity: calc(1 - var(--modifier));
+    pointer-events: var(--pointer-events);
 
     @media (prefers-reduced-motion: no-preference) {
         animation: scroll-down-idle 7s linear infinite;
