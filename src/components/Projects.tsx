@@ -4,11 +4,13 @@ import { useState, useRef, useEffect } from 'react'
 import '../styles/components/Projects.scss';
 import SectionTitle from './resusable/SectionTitle';
 import ProjectsIcon from '../assets/icons/projects_icon.svg?react';
+import ProjectCard from "./resusable/ProjectCard";
 
 export default function Projects () {
     const { i18n, t } = useTranslation();
-    const [data, setData] = useState<any>({});
-    const [displayData, setDisplayData] = useState<any>([]);
+
+    const [data, setData] = useState<any>({projects: []});
+    const [displayData, setDisplayData] = useState<any>({projects: []});
     const [categories, setCategories] = useState<string[]>(["apps", "games", "comics"]);
     const [displayCategory, setDisplayCategory] = useState<string>("apps");
     const [tags, setTags] = useState<string[]>([]);
@@ -20,7 +22,7 @@ export default function Projects () {
             prev.includes(tag) ? prev.filter((t: string) => t !== tag) : [...prev, tag]
         );
     };
-    
+
     useEffect(() => {
         const jsonPath = `${import.meta.env.VITE_HOST}/projects.json`
         fetch(jsonPath)
@@ -39,6 +41,11 @@ export default function Projects () {
             return uniqueTagsArray;
         }
     }, [])
+
+    useEffect(() => {
+        setDisplayData(data);
+    }, [data, displayCategory, selectedTags])
+    
 
     return (
         <section data-section="projects" className="projects">
@@ -66,14 +73,19 @@ export default function Projects () {
                     <label key={tag}htmlFor={`tag-${tag}`}>
                         <input
                             type="checkbox" id={`tag-${tag}`}
-                            checked={selectedTags.includes(tag)}
+                            checked={selectedTags.includes(tag as never)}
                             onChange={() => handleTagChange(tag)}
                         />
                         {t(tag)}
                     </label>
                     ))}
                 </li>
+            </ul>
 
+            <ul className="projects-container">
+                {displayData && displayData.projects.map((project: any) => (
+                    <ProjectCard key={project.key} project={project}/>
+                ))}
             </ul>
         </section>
     )

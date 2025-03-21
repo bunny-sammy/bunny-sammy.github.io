@@ -7,13 +7,28 @@
             "key":"tavern-talk",
             "name":"Tavern Talk",
             "category":"apps",
+            "year":"2024",
             "tags":[
-                "next", "react", "ts", "scss", "mongodb"
+                "vite", "next", "react", "js", "scss", "mongodb"
             ],
             "description":"Generate tabletop RPG character sheets through a friendly chat",
             "actions":{
                 "access":"https://tavern-talk.vercel.app/",
                 "code":"https://github.com/bunny-sammy/tavern-talk"
+            }
+        },
+        {
+            "key":"portfolio",
+            "name":"Meu Portfolio",
+            "category":"apps",
+            "year":"2025",
+            "tags":[
+                "vite", "react", "ts", "scss", "i18n"
+            ],
+            "description":"My portfolio :]",
+            "actions":{
+                "access":"https://bunny-sammy.github.io/",
+                "code":"https://github.com/bunny-sammy/bunny-sammy.github.io"
             }
         }
     ]
