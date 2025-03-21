@@ -5,7 +5,8 @@ nav {
     top: 0;
     right: 0;
     z-index: 50;
-    color: $text3;
+    color: $text1;
+    filter: brightness(calc(1 - var(--modifier))) invert(var(--modifier));
 
     display: flex;
     height: var(--height);
@@ -23,7 +24,7 @@ nav {
         align-items: center;
         text-align: right;
 
-        background-color: $accent2;
+        // background-color: $accent2;
         height: inherit;
         gap: 2rem;
         padding: 0 2.5rem;

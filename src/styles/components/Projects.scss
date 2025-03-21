@@ -41,7 +41,6 @@ section.projects {
             transform-origin: center;
 
             color: $text1;
-            font-size: 0.85rem;
             padding: 0.5rem 1rem;
             border: 2px solid $text2;
             border-radius: 25px;
@@ -58,8 +57,12 @@ section.projects {
                 background-color: $accent1;
             }
 
+            &:hover {
+                transform: scale(110%);
+            }
+
             &:active {
-                transform: scale(80%);
+                transform: scale(90%);
             }
             
         }
