@@ -3,6 +3,7 @@ import { useState, useRef, memo } from 'react'
 
 import '../styles/components/Landing.scss';
 import profilePic from '../assets/images/profile.png';
+import balloons from '../assets/images/profile_balloons.png';
 import LinkedIcon from '../assets/icons/landing_linkedin.svg?react';
 import GitIcon from '../assets/icons/landing_github.svg?react';
 import ItchIcon from '../assets/icons/landing_itch.svg?react';
@@ -37,18 +38,20 @@ export default memo(function Landing() {
     return (
         <section className="landing">
             <div className="landing-inner">
-                <img src={profilePic}/>
-                <div className="title">
-                    <h1>David Coelho</h1>
-                    <h2>{t('landing.occupation')}</h2>
-                </div>
-                <div className="socials">
-                    {socials.map( (social, i) => (
-                        <a key={i} href={social.url}>
-                            {social.icon}
-                        </a>
-                    ) )}
-                </div>
+                <img src={balloons}/>
+                <hgroup>
+                    <div className="title">
+                        <h1>David Coelho</h1>
+                        <h2>{t('landing.occupation')}</h2>
+                    </div>
+                    <div className="socials">
+                        {socials.map( (social, i) => (
+                            <a key={i} href={social.url}>
+                                {social.icon}
+                            </a>
+                        ) )}
+                    </div>
+                </hgroup>
             </div>
         </section >
     )

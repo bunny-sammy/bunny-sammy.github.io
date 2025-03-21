@@ -2,10 +2,10 @@
 
 section.projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    gap: 1rem;
     justify-content: center;
+    margin-bottom: 5rem;
 
     .title-line {
         display: flex;
@@ -15,6 +15,53 @@ section.projects {
 
         span {
             color: $text2
+        }
+    }
+
+    .tag-line {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        gap: 2rem;
+        margin: 0.25rem 0;
+
+        li {
+            display: inherit;
+            flex-direction: inherit;
+
+            gap: 0.75rem;
+        }
+
+        label {
+            display: inherit;
+            flex-direction: inherit;
+            justify-content: center;
+            min-width: 2rem;
+            cursor: pointer;
+            transform-origin: center;
+
+            color: $text1;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid $text2;
+            border-radius: 25px;
+
+            transition: all 0.15s ease;
+
+            input {
+                display: none;
+            }
+
+            &:has(input:checked) {
+                color: $text3;
+                border-color: $accent1;
+                background-color: $accent1;
+            }
+
+            &:active {
+                transform: scale(80%);
+            }
+            
         }
     }
 

@@ -1,9 +1,12 @@
 {
+    "categories": [
+        "apps", "games", "comics"
+    ],
     "projects": [
         {
             "key":"tavern-talk",
             "name":"Tavern Talk",
-            "category":"app",
+            "category":"apps",
             "tags":[
                 "next", "react", "ts", "scss", "mongodb"
             ],

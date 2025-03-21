@@ -4,7 +4,6 @@
 import '../styles/components/About.scss';
 import SectionTitle from './resusable/SectionTitle';
 import SquareList from './resusable/SquareList';
-import balloons from '../assets/images/abou_balloons.png';
 import AboutIcon from '../assets/icons/about_icon.svg?react';
 
 export default function About () {
@@ -37,7 +36,6 @@ export default function About () {
                     />
                 </div>
             </div>
-            <img src={balloons}/>
         </section>
     ) 
 }
