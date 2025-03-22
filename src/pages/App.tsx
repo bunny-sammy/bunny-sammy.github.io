@@ -15,6 +15,10 @@ export default function App() {
       <main>
         <About/>
         <Projects/>
+        <About/>
+
+        <About/>
+
       </main>
     </>
   )

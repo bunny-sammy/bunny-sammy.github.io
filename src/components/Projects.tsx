@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import '../styles/components/Projects.scss';
 import SectionTitle from './resusable/SectionTitle';
 import ProjectsIcon from '../assets/icons/projects_icon.svg?react';
-import ProjectCard from "./resusable/ProjectCard";
+import ProjectCards from "./resusable/ProjectCards";
 
 export default function Projects () {
     const { i18n, t } = useTranslation();
@@ -44,8 +44,7 @@ export default function Projects () {
 
     useEffect(() => {
         setDisplayData(data);
-    }, [data, displayCategory, selectedTags])
-    
+    }, [data, displayCategory, selectedTags])    
 
     return (
         <section data-section="projects" className="projects">
@@ -55,7 +54,7 @@ export default function Projects () {
             </div>
             <ul className="tag-line disable-select">
 
-                <li className="tag-list categories">
+                <li className="tag-list">
                     {categories.map((tag: string) => (
                     <label key={tag} htmlFor={`category-${tag}`}>
                         <input
@@ -66,9 +65,6 @@ export default function Projects () {
                         {t(tag)}
                     </label>
                     ))}
-                </li>
-
-                <li className="tag-list filters">
                     {tags.map((tag: string) => (
                     <label key={tag}htmlFor={`tag-${tag}`}>
                         <input
@@ -82,11 +78,7 @@ export default function Projects () {
                 </li>
             </ul>
 
-            <ul className="projects-container">
-                {displayData && displayData.projects.map((project: any) => (
-                    <ProjectCard key={project.key} project={project}/>
-                ))}
-            </ul>
+            <ProjectCards data={data.projects}/>
         </section>
     )
 }

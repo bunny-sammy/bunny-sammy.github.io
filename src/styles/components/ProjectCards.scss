@@ -1,0 +1,38 @@
+@use "../abstract/_variables.scss" as *;
+
+ul.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--card-width, 300px), 100%), 1fr));
+    grid-auto-rows: 10px;
+    justify-content: center;
+    gap: 0 1rem;
+
+    width: 100%;
+    margin-top: 0.5rem;
+
+    transition: all 0.2s ease;
+
+    li {
+        display: block;
+        padding: 1rem;
+        background-color: $background2;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+
+        height: fit-content;
+
+        transition: all 0.2s ease;
+    }
+
+    li.resized {
+        height: unset;
+        grid-row: span var(--card-height, 50);        
+    }
+
+    li.removing {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(-30%);
+        pointer-events: none;
+    }
+}

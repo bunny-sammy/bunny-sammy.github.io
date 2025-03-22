@@ -30,6 +30,62 @@
                 "access":"https://bunny-sammy.github.io/",
                 "code":"https://github.com/bunny-sammy/bunny-sammy.github.io"
             }
+        },
+        {
+            "key":"tavern-talk-",
+            "name":"Tavern Talk",
+            "category":"apps",
+            "year":"2024",
+            "tags":[
+                "vite", "next", "react", "js", "scss", "mongodb"
+            ],
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor nunc vel lectus aliquet vulputate sit amet sed odio. Nulla ut diam et urna mollis elementum sit amet eu quam. Nunc non rhoncus est, quis sagittis velit. Curabitur facilisis purus quis facilisis blandit. Cras dignissim at sapien at iaculis. Curabitur pulvinar odio id ex molestie feugiat. Curabitur imperdiet ante vitae ipsum ultricies aliquet quis vel nunc. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla imperdiet commodo dui ac viverra. In elementum risus non leo molestie, nec luctus velit commodo. Fusce euismod a nunc in varius. Nullam congue sodales euismod. Sed accumsan odio et nisl volutpat tempus.",
+            "actions":{
+                "access":"https://tavern-talk.vercel.app/",
+                "code":"https://github.com/bunny-sammy/tavern-talk"
+            }
+        },
+        {
+            "key":"portfolio-",
+            "name":"Meu Portfolio",
+            "category":"apps",
+            "year":"2025",
+            "tags":[
+                "vite", "react", "ts", "scss", "i18n"
+            ],
+            "description":"Integer viverra lorem eget finibus volutpat. Nam sem erat, tristique sit amet urna id, suscipit aliquet libero. Aliquam pretium leo vitae felis sollicitudin tempor. Etiam arcu augue, gravida eget varius a, tincidunt non lectus. Cras posuere suscipit mollis. Curabitur eu dapibus nisl, ac pulvinar turpis. Phasellus tincidunt posuere augue, vitae porta odio rhoncus ultricies. Aliquam dapibus, risus a viverra tristique, elit enim sollicitudin purus, ut posuere massa tortor sed enim.",
+            "actions":{
+                "access":"https://bunny-sammy.github.io/",
+                "code":"https://github.com/bunny-sammy/bunny-sammy.github.io"
+            }
+        },
+        {
+            "key":"tavern-talk--",
+            "name":"Tavern Talk",
+            "category":"apps",
+            "year":"2024",
+            "tags":[
+                "vite", "next", "react", "js", "scss", "mongodb"
+            ],
+            "description":"Donec urna libero, suscipit eget aliquet non, gravida a orci. Aenean malesuada neque nisi, nec venenatis nisi facilisis sit amet. Nunc egestas vel massa nec pellentesque. Integer laoreet risus fringilla ante ullamcorper, sed molestie risus tempus. Sed dolor sapien, blandit eget vestibulum vitae, tincidunt nec nisl. Morbi interdum accumsan urna, in laoreet erat egestas eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas dolor ac ex commodo mollis. Pellentesque sit amet sem et nisi imperdiet bibendum ut ut odio.",
+            "actions":{
+                "access":"https://tavern-talk.vercel.app/",
+                "code":"https://github.com/bunny-sammy/tavern-talk"
+            }
+        },
+        {
+            "key":"portfolio--",
+            "name":"Meu Portfolio",
+            "category":"apps",
+            "year":"2025",
+            "tags":[
+                "vite", "react", "ts", "scss", "i18n"
+            ],
+            "description":"My portfolio :]",
+            "actions":{
+                "access":"https://bunny-sammy.github.io/",
+                "code":"https://github.com/bunny-sammy/bunny-sammy.github.io"
+            }
         }
     ]
 }
