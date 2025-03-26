@@ -45,7 +45,7 @@ ul.projects-container {
         grid-row: span var(--card-height, 50);
     }
 
-    li.removing {
+    li.hidden {
         position: absolute;
         opacity: 0;
         transform: translateY(-30%);

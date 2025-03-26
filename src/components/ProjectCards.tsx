@@ -10,14 +10,15 @@ import ReadIcon from '../assets/icons/projects_read.svg?react';
 
 interface ProjectCardProps {
     data: any[],
-    tags: any[]
+    tags: any[],
+    displayData: any[]
 }
 
 interface ActionIconProps {
     action: string
 }
 
-export default memo(function ProjectCards ({data, tags}: ProjectCardProps) {
+export default memo(function ProjectCards ({data, tags, displayData}: ProjectCardProps) {
     const { i18n, t } = useTranslation();
 
     const [cardHeights, setCardHeights] = useState<number[]>([20,50,40,80,90,50]);
@@ -26,16 +27,15 @@ export default memo(function ProjectCards ({data, tags}: ProjectCardProps) {
     const ActionIcon = ({ action }: ActionIconProps) => {
         switch (action) {
             case "code":
-            return <CodeIcon/>
+                return <CodeIcon/>
             case "play":
-            return <PlayIcon/>
+                return <PlayIcon/>
             case "read-pt":
             case "read-en":
-            return <ReadIcon/>
+                return <ReadIcon/>
             case "access":
             default:
-            return <AccessIcon/>;
-
+                return <AccessIcon/>;
         }
     };
 
@@ -64,7 +64,8 @@ export default memo(function ProjectCards ({data, tags}: ProjectCardProps) {
     return (
         <ul className="projects-container" ref={containerRef}>
             {data && data.map((project: any, i: number) => (
-                <li key={project.key} className="project-card resized" style={{"--card-height": cardHeights[i] ?? 50} as React.CSSProperties}>
+                <li key={project.key} style={{"--card-height": cardHeights[i] ?? 50} as React.CSSProperties}
+                className={`project-card ${!displayData.includes(project) ? "hidden" : ""}`}>
                     <h2>{project.name}</h2>
                     <ul className="card-tags">
                         {project.tags && project.tags.map((tag: string, j: number) => (

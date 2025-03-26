@@ -10,7 +10,7 @@ export default memo(function Projects () {
     const { i18n, t } = useTranslation();
 
     const [data, setData] = useState<any>({projects: []});
-    const [displayData, setDisplayData] = useState<any>({projects: []});
+    const [displayData, setDisplayData] = useState<any>([]);
     const [categories, setCategories] = useState<string[]>(["apps", "games", "comics"]);
     const [displayCategory, setDisplayCategory] = useState<string>("apps");
     const [tags, setTags] = useState<string[]>([]);
@@ -43,8 +43,8 @@ export default memo(function Projects () {
     }, [])
 
     useEffect(() => {
-        setDisplayData(data);
-    }, [data, displayCategory, selectedTags])    
+        setDisplayData(data.projects);
+    }, [data, displayCategory, selectedTags])
 
     return (
         <section data-section="projects" className="projects">
@@ -78,7 +78,7 @@ export default memo(function Projects () {
                 </li>
             </ul>
 
-            <ProjectCards data={data.projects} tags={selectedTags}/>
+            <ProjectCards data={data.projects} tags={selectedTags} displayData={displayData}/>
         </section>
     )
 })
