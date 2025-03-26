@@ -12,8 +12,10 @@ ul.projects-container {
 
     transition: all 0.2s ease;
 
-    li {
-        display: block;
+    li:not(.tag) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 1rem;
         background-color: $background2;
         margin-bottom: 1rem;
@@ -21,12 +23,26 @@ ul.projects-container {
 
         height: fit-content;
 
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+
+        h2, p {
+            margin: 0;
+            width: 100%;
+        }
+
+        p {
+            color: $text4;
+        }
+
+        img {
+            width: calc(100% + 2rem);
+            margin: 0.65rem 0;
+        }        
     }
 
     li.resized {
         height: unset;
-        grid-row: span var(--card-height, 50);        
+        grid-row: span var(--card-height, 50);
     }
 
     li.removing {
@@ -34,5 +50,69 @@ ul.projects-container {
         opacity: 0;
         transform: translateY(-30%);
         pointer-events: none;
+    }
+}
+
+ul.card-tags {
+    display: block;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    
+    li.tag {
+        display: inline-block;
+        font-size: 0.9rem;
+        color: $text4;
+
+        &:not(:last-child) {
+            padding-right: 0.5rem;
+            margin-right: 0.5rem;
+            border-right: 1px solid $text2;
+        }
+
+        &.selected {
+            color: $accent1;
+            font-weight: 700;
+        }
+    }
+}
+
+div.actions-line {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transform-origin: center;
+        white-space: nowrap;
+        gap: 0.25rem;
+
+        font-size: 0.9rem;
+        text-decoration: none;
+        padding: 0.4rem 0.8rem;
+        border: 2px solid $text2;
+        border-radius: 25px;
+
+        transition: all 0.15s ease;
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
+
+        &:hover {
+            transform: scale(110%);
+        }
+
+        &:active {
+            transform: scale(90%);
+        }
     }
 }

@@ -62,9 +62,10 @@ section.projects {
             display: inherit;
             flex-direction: inherit;
             justify-content: center;
-            min-width: 2rem;
+            width: max(2rem, auto);
             cursor: pointer;
             transform-origin: center;
+            white-space: nowrap;
 
             color: $text1;
             padding: 0.5rem 1rem;

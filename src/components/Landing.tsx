@@ -46,7 +46,7 @@ export default memo(function Landing() {
                     </div>
                     <div className="socials">
                         {socials.map( (social, i) => (
-                            <a key={i} href={social.url}>
+                            <a key={i} href={social.url} target="_blank" rel="noopener noreferrer">
                                 {social.icon}
                             </a>
                         ) )}

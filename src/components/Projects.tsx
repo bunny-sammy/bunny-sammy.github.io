@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, memo, useCallback } from 'react'
 
 import '../styles/components/Projects.scss';
 import SectionTitle from './resusable/SectionTitle';
 import ProjectsIcon from '../assets/icons/projects_icon.svg?react';
-import ProjectCards from "./resusable/ProjectCards";
+import ProjectCards from "./ProjectCards";
 
-export default function Projects () {
+export default memo(function Projects () {
     const { i18n, t } = useTranslation();
 
     const [data, setData] = useState<any>({projects: []});
@@ -17,11 +17,11 @@ export default function Projects () {
     const [displayTags, setDisplayTags] = useState<string[]>([]);
     const [selectedTags, setSelectedTags] = useState([]);
 
-    const handleTagChange = (tag: string) => {
+    const handleTagChange = useCallback((tag: string) => {
         setSelectedTags((prev: any) =>
             prev.includes(tag) ? prev.filter((t: string) => t !== tag) : [...prev, tag]
         );
-    };
+    }, []);
 
     useEffect(() => {
         const jsonPath = `${import.meta.env.VITE_HOST}/projects.json`
@@ -62,7 +62,7 @@ export default function Projects () {
                             checked={displayCategory == tag}
                             onChange={() => setDisplayCategory(tag)}
                         />
-                        {t(tag)}
+                        {t(`tags.${tag}`)}
                     </label>
                     ))}
                     {tags.map((tag: string) => (
@@ -72,13 +72,13 @@ export default function Projects () {
                             checked={selectedTags.includes(tag as never)}
                             onChange={() => handleTagChange(tag)}
                         />
-                        {t(tag)}
+                        {t(`tags.${tag}`)}
                     </label>
                     ))}
                 </li>
             </ul>
 
-            <ProjectCards data={data.projects}/>
+            <ProjectCards data={data.projects} tags={selectedTags}/>
         </section>
     )
-}
+})

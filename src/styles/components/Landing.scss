@@ -40,6 +40,7 @@
         align-items: center;
         margin-left: 10dvw;
         gap: 0.85rem;
+        z-index: 50;
 
         transform: var(--name-transform);
         filter: brightness(calc(1 - var(--modifier))) invert(var(--modifier));
