@@ -68,9 +68,9 @@ export default memo(function ProjectCards ({data, tags, displayData}: ProjectCar
                 className={`project-card ${!displayData.includes(project) ? "hidden" : ""}`}>
                     <h2>{project.name}</h2>
                     <ul className="card-tags">
-                        {project.tags && project.tags.map((tag: string, j: number) => (
+                        {project.tags && [project.year].concat(project.tags).map((tag: string, j: number) => (
                             <li key={j} className={`tag ${tags.includes(tag) ? "selected" : ""}`}>
-                                {t(`tags.${tag}`)}
+                                {j > 1 ? t(`tags.${tag}`) : tag}
                             </li>
                         ))}
                     </ul>

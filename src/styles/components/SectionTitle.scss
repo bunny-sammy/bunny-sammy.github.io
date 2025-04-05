@@ -13,6 +13,10 @@ div.section-title {
 
     border-bottom: 2px solid $text2;
 
+    h2 {
+        margin-bottom: unset;
+    }
+
     svg {
         color: $text2;
         height: 80%;
