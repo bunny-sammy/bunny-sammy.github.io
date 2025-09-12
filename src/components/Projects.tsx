@@ -1,10 +1,20 @@
 import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect, memo, useCallback } from 'react'
+import { useState, useEffect, memo, useCallback } from 'react'
 
 import '../styles/components/Projects.scss';
 import SectionTitle from './resusable/SectionTitle';
 import ProjectsIcon from '../assets/icons/projects_icon.svg?react';
 import ProjectCards from "./ProjectCards";
+
+export type Project = {
+    actions: Record<string, string>,
+    category: string,
+    description: string,
+    key: string,
+    name: string,
+    tags: string[],
+    year: string
+}
 
 export default memo(function Projects () {
     const { i18n, t } = useTranslation();

@@ -1,15 +1,16 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../styles/components/ProjectCards.scss';
+import type { Project } from './Projects';
 
-import coverImage from '../assets/images/projects/tavern-talk.png';
+// import coverImage from '../assets/images/projects/tavern-talk.png';
 import AccessIcon from '../assets/icons/projects_access.svg?react';
 import CodeIcon from '../assets/icons/projects_code.svg?react';
 import PlayIcon from '../assets/icons/projects_play.svg?react';
 import ReadIcon from '../assets/icons/projects_read.svg?react';
 
 interface ProjectCardProps {
-    data: any[],
+    data: Project[],
     tags: any[],
     displayData: any[]
 }
@@ -18,7 +19,7 @@ interface ActionIconProps {
     action: string
 }
 
-export default memo(function ProjectCards ({data, tags, displayData}: ProjectCardProps) {
+export default function ProjectCards ({data, tags, displayData}: ProjectCardProps) {
     const { i18n, t } = useTranslation();
 
     const [cardHeights, setCardHeights] = useState<number[]>([20,50,40,80,90,50]);
@@ -39,38 +40,50 @@ export default memo(function ProjectCards ({data, tags, displayData}: ProjectCar
         }
     };
 
-    useEffect(() => {
-        const updateSpans = () => {
-            if (!containerRef.current) return;
-
-            const items = Array.from(containerRef.current.children) as HTMLElement[];
-            const newHeights = items.map((item) => {
-                item.classList.remove("resized");
-                const contentHeight = Math.ceil(item.scrollHeight / 10) + 1;
-                item.classList.add("resized");
-
-                return contentHeight;
-            });
-
-            setCardHeights(newHeights);
+    const updateSpans = () => {
+        if (!containerRef.current) {
+            return;
         };
 
+        const items = Array.from(containerRef.current.children) as HTMLElement[];
+        const newHeights = items.map((item) => {
+            item.classList.remove("resized");
+            const contentHeight = Math.ceil(item.scrollHeight / 10) + 1;
+            item.classList.add("resized");
+
+            return contentHeight;
+        });
+
+        setCardHeights(newHeights);
+    };
+
+    useEffect(() => {
         updateSpans();
+
+        const images = containerRef.current?.querySelectorAll("img") ?? [];
+        images.forEach(img => {
+            img.addEventListener("load", updateSpans);
+        });
         window.addEventListener("resize", updateSpans); // Update on resize
 
-        return () => window.removeEventListener("resize", updateSpans);
+        return () => {
+            images.forEach(img => {
+                img.removeEventListener("load", updateSpans);
+            });
+            window.removeEventListener("resize", updateSpans);
+        }
     }, [data]);
 
     return (
         <ul className="projects-container" ref={containerRef}>
             {data && data.map((project: any, i: number) => (
                 <li key={project.key} style={{"--card-height": cardHeights[i] ?? 50} as React.CSSProperties}
-                className={`project-card ${!displayData.includes(project) ? "hidden" : ""}`}>
+                className={`project-card card-shadow ${!displayData.includes(project) ? "hidden" : ""}`}>
                     <h2>{project.name}</h2>
                     <ul className="card-tags">
                         {project.tags && [project.year].concat(project.tags).map((tag: string, j: number) => (
                             <li key={j} className={`tag ${tags.includes(tag) ? "selected" : ""}`}>
-                                {j > 1 ? t(`tags.${tag}`) : tag}
+                                {j > 0 ? t(`tags.${tag}`) : tag}
                             </li>
                         ))}
                     </ul>
@@ -78,7 +91,7 @@ export default memo(function ProjectCards ({data, tags, displayData}: ProjectCar
                     <p>{project.description}</p>
                     <div className="actions-line">
                         {project.actions && Object.entries(project.actions).map(([action, url], j: number) => (
-                            <a key={j} href={url} target="_blank" rel="noopener noreferrer">
+                            <a key={j} href={url as string} target="_blank" rel="noopener noreferrer">
                                 <ActionIcon action={action}/>
                                 {t(`actions.${action}`)}
                             </a>
@@ -88,4 +101,4 @@ export default memo(function ProjectCards ({data, tags, displayData}: ProjectCar
             ))}
         </ul>
     )
-})
+}

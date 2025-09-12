@@ -21,6 +21,13 @@ html, body {
   scroll-behavior: smooth !important;
 }
 
+* {
+    caret-color: transparent;
+}
+input {
+    caret-color: $text2;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -55,4 +62,10 @@ p {
 
 img {
   pointer-events: none;
+}
+
+.card-shadow {
+  box-shadow:
+    0px 5px 6px 0px #b1def5,
+    0px 2px 15px 0px #c4dae5;
 }

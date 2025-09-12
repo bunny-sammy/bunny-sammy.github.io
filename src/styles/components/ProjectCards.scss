@@ -60,13 +60,13 @@ ul.card-tags {
     
     li.tag {
         display: inline-block;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         color: $text4;
 
-        &:not(:last-child) {
-            padding-right: 0.5rem;
-            margin-right: 0.5rem;
-            border-right: 1px solid $text2;
+        &:not(:last-child)::after {
+            display: inline;
+            content: '·';
+            padding: 0 0.5rem;
         }
 
         &.selected {
@@ -84,7 +84,6 @@ div.actions-line {
     gap: 0.5rem;
     width: 100%;
     margin-top: 0.75rem;
-    margin-bottom: 0.25rem;
 
     a {
         display: flex;
@@ -93,6 +92,7 @@ div.actions-line {
         transform-origin: center;
         white-space: nowrap;
         gap: 0.25rem;
+        color: $text1;
 
         font-size: 0.9rem;
         text-decoration: none;

@@ -24,7 +24,7 @@
             "tags":[
                 "vite", "next", "react", "js", "scss", "mongodb"
             ],
-            "description":"Gera e armazena seus personagens de RPG de mesa com uma interface que se assemelha a um chat. Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB.",
+            "description":"Gera e armazena seus personagens de RPG de mesa com uma interface que se assemelha a um chat. Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB.",
             "actions":{
                 "access":"https://tavern-talk.vercel.app/",
                 "code":"https://github.com/bunny-sammy/tavern-talk"
@@ -50,7 +50,7 @@
             "category":"games",
             "year":"2020",
             "tags":[
-                "unity", "c#", "asset-creation"
+                "unity", "c#", "2d-assets"
             ],
             "description":"Um simples clone de Pong criado para fins de aprendizado. Nele você pode jogar com um amigo localmente, guardar highscores e até enfrentar a máquina com uma IA simples. O jogo pode ser baixado ou jogado no próprio browser.",
             "actions":{
@@ -58,12 +58,12 @@
             }
         },
         {
-            "key":"ahirue",
+            "key":"ahiru",
             "name":"AHIRU",
             "category":"games",
             "year":"2025",
             "tags":[
-                "godot", "asset-creation"
+                "godot", "2d-assets"
             ],
             "description":"\"Ajude um pato pilotando uma bolha a resgatar outros animais utilizando controles de sopro!\" Nossa submissão para a Global Game Jam 2025, onde o tema era \"bolha\". Focamos principalmente em criar uma movimentação única e divertida para nos diferenciar dos demais jogos da jam, tentando mesclar as visões artísticas dos memboros do time. Neste projeto fiquei encarregado apenas da produção de assets do cenário e ilustração do menu de pause.",
             "actions":{
@@ -79,7 +79,7 @@
             "tags":[
                 "rpg-maker-mv", "js"
             ],
-            "description":"\"Gerencie seu tempo e derote monstros neste RPG Tático para prevenir que sua guilda seja fechada!\" Vencedor de uma game jam, este jogo é a culimnação de todo o conhecimento acumulado na minha infância e adolescência brincando com várias edições do RPG Maker. Nele eu demonstro tudo que aprendi não só na ferramenta como também em game design e roteiro como uma grande carta de amor à comunidade de makers.",
+            "description":"\"Gerencie seu tempo e derote monstros neste RPG Tático para prevenir que sua guilda seja fechada!\" Vencedor de uma game jam, este jogo é a culminação de todo o conhecimento acumulado na minha infância e adolescência brincando com várias edições do RPG Maker. Nele eu demonstro tudo que aprendi não só na ferramenta como também em game design e roteiro como uma grande carta de amor à comunidade de makers.",
             "actions":{
                 "play":"https://bunnysammy.itch.io/rising-stars-gambit"
             }
