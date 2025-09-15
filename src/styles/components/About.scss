@@ -14,18 +14,27 @@ section.about {
     .about-grid {
         display: grid;
         grid-template-columns: 2fr 3fr;
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column;
         width: 100%;
-        padding: 1.25rem;
-        gap: 1.25rem;
-        border-radius: 1.25rem;
+        gap: 1rem;
         margin-top: 1rem;
-
-        background-color: $background2;
         
-        .about-left {
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
+        .about-card, .about-right {
+            background-color: $background2;
+            border-radius: 1.25rem;
+            padding: 1.25rem;            
+        }
+
+        .about-right {
+            background-color: $accent2;
+            color: $text3;
+            grid-row: 1 / 4;
+        }
+
+        span {
+            font-weight: 650;
+            color: $accent1;
         }
     }
 }

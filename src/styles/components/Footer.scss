@@ -1,0 +1,10 @@
+@use "../abstract/_variables.scss" as *;
+
+section.footer {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 3rem 15dvw;
+
+    background-color: $accent2;
+    color: $text3;
+}

@@ -103,10 +103,12 @@ nav {
             display: none;
             position: fixed;
             top: 60px;
+            width: 100vw;
+            // background-color: blue;
 
             flex-direction: column;
             justify-content: start;
-            align-items: end;
+            align-items: center;
             height: auto;
 
             margin-top: -0.1rem;
@@ -116,6 +118,7 @@ nav {
             li:not(.icons) {
                 width: 100%;
                 padding: 0 0.5rem;
+                text-align: center;
             }
             li.icons {
                 height: unset;

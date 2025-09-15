@@ -37,7 +37,7 @@ section.projects {
         gap: 2rem;
         padding: 1rem 0;
 
-        background: linear-gradient($background1, transparent);
+        // background: linear-gradient($background1, transparent);
 
         li {
             display: inherit;
@@ -72,8 +72,8 @@ section.projects {
             border-radius: 25px;
             background-color: $background2;
             box-shadow:
-                0px 5px 5px 0px #b1def5,
-                0px 2px 5px 0px #c4dae5;
+                0px 5px 5px 0px #b1def57e,
+                0px 2px 5px 0px #c4dae57e;
 
             transition: all 0.15s ease;
 
@@ -86,8 +86,8 @@ section.projects {
                 border-color: $accent1;
                 background-color: $accent1;
                 box-shadow:
-                    0px 5px 5px 0px #f5b1d0,
-                    0px 2px 5px 0px #c4dae5;
+                    0px 5px 5px 0px #f5b1b983,
+                    0px 2px 5px 0px #c4dae587;
             }
 
             &:hover {
