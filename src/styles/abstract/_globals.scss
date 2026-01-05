@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$colors: (
+    background1: #DCEBF3,
+    background2: #EFF5F8,
+    text1: #51607E,
+    text2: #97AAD0,
+    text3: #FFFFFF,
+    text4: #798bab,
+    accent1: #f87f97,
+    accent2: #fca6b6,
+    selection: rgba(248, 127, 145, 0.5)
+);
+
+@function color($key) {
+    @return map.get($colors, $key);
+}

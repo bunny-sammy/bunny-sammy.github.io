@@ -1,23 +1,20 @@
 // import { useTranslation } from "react-i18next";
 // import { useState } from 'react'
 
+import '../styles/layout.scss'
 import '../styles/components/App.scss'
-import Header from "../components/Header";
-import About from "../components/About";
-import Projects from '../components/Projects';
-import Footer from '../components/Footer';
+import Landing from '../components/Landing'
+import Article from '../components/Article'
 
 export default function App() {
   // const { i18n, t } = useTranslation();
 
   return (
     <>
-      <Header/>
       <main>
-        <About/>
-        <Projects/>
+        <Landing />
+        <Article />
       </main>
-      <Footer/>
     </>
   )
 }
