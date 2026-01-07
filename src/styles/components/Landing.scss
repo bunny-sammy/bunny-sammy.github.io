@@ -1,7 +1,7 @@
 @use "../abstract" as *;
 
 aside {
-    --padding: 5rem;
+    --padding: 5vh;
 
     position: sticky;
     top: 0;
@@ -26,9 +26,83 @@ aside {
         display: flex;
         gap: 0.5rem;
         justify-content: center;
-    }
+    }    
 
     @media (max-width: 1360px) {
         position: static;
+    }
+}
+
+svg#hero {
+    position: absolute;
+    width: 65vw;
+
+    left: -1rem;
+    top: -20vh;
+    z-index: -1;
+    pointer-events: none;
+
+    #avatar {
+        transform-origin: bottom;
+        @media (prefers-reduced-motion: no-preference) {
+            animation: hero-avatar-breath 6s 0s infinite;
+        }
+    }
+
+    #balloons-top > path {
+        transform-origin: left;
+        @media (prefers-reduced-motion: no-preference) {
+            animation: hero-balloons 6s var(--delay) infinite;
+        }
+
+        &:nth-child(4n-2) {
+            --delay: 0s;
+        }
+        &:nth-child(4n-1) {
+            --delay: 1s;
+        }
+        &:nth-child(4n) {
+            --delay: 2s;
+        }
+        &:nth-child(4n+1) {
+            --delay: 3s;
+        }
+    }
+
+    // #balloons-top-shine {
+    //     display: none;
+    // }
+}
+
+@keyframes hero-avatar-breath {
+    0% {
+        transform: skew(1deg, 0);
+        scale: 1;
+    }
+    25% {
+        scale: 1 0.98;
+    }
+    50% {
+        transform: skew(-1deg, 0);
+        scale: 1;
+    }
+    75% {
+        scale: 1 0.98;
+    }
+    100% {
+        transform: skew(1deg, 0);
+        scale: 1;
+    }
+}
+
+@keyframes hero-balloons {
+    0% {
+        transform: rotate(0deg);
+    }    
+    50% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

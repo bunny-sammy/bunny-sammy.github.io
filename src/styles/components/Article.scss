@@ -1,5 +1,6 @@
 @use "../abstract" as *;
 
 article {
+    z-index: 10;
     min-height: 200vh;
-}   
+}
