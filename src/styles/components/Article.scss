@@ -1,6 +1,43 @@
 @use "../abstract" as *;
 
 article {
+    display: flex;
+    flex-direction: column;
     z-index: 10;
-    min-height: 200vh;
+
+    padding: 2rem;
+    gap: 1.5rem;
+
+    @media (max-width: 1360px) {
+        padding: 0 2rem;
+    }
+
+    @media (max-width: 640px) {
+        padding: 0;
+    }
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: color(background2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid color(text1);
+    box-shadow: shadow(card1);
+
+    hgroup {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+            margin-top: -0.25rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        box-shadow: shadow(card2);
+    }
 }

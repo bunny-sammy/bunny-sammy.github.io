@@ -15,3 +15,14 @@ $colors: (
 @function color($key) {
     @return map.get($colors, $key);
 }
+
+$shadow: (
+    card1: 5px 5px 0px 0px color(text1),
+    card2: 0px 5px 0px 0px color(text1),
+    button1: 0px 2px 0px 0px color(text1),
+    button2: 0px 0px 0px 0px color(text1)
+);
+
+@function shadow($key) {
+    @return map.get($shadow, $key);
+}

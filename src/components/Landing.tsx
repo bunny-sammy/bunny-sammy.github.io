@@ -3,6 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import '../styles/components/Landing.scss'
 import Hero from "../assets/hero.svg?react";
+import Resume from "../assets/resume.svg?react";
+import Email from "../assets/mail.svg?react";
+import Github from "../assets/github.svg?react";
+import Linkedin from "../assets/linkedin.svg?react";
+import Instagram from "../assets/instagram.svg?react";
 
 export default function Landing() {
   const { i18n, t } = useTranslation();
@@ -18,22 +23,20 @@ export default function Landing() {
       </hgroup>
       <nav>
         <button>
+          <Resume />
           Currículo
         </button>
         <button>
-          Projetos
+          <Email />
         </button>
         <button>
-          E
+          <Linkedin />
         </button>
         <button>
-          L
+          <Github />
         </button>
         <button>
-          G
-        </button>
-        <button>
-          I
+          <Instagram />
         </button>
       </nav>
     </aside>

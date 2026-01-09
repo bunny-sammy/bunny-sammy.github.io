@@ -4,15 +4,38 @@ main {
     display: grid;
     grid-template-columns: 3fr 7fr;
 
-    margin: 0rem 4rem; 
+    padding: 0rem 4rem;
+    overflow-x: hidden;
 
     @media (max-width: 1360px) {
         display: flex;
         flex-direction: column;
-        margin: 0rem 2rem;
+        padding: 0rem 2rem;
     }
     
     @media (max-width: 640px) {   
-        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+    }
+}
+
+.gradient {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 80vw;
+    height: 100vh;
+    z-index: 9;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        color(background1)
+    );
+    mix-blend-mode: lighten;
+    pointer-events: none;
+
+    @media (max-width: 1360px) {
+        display: none;
     }
 }

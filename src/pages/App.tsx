@@ -11,6 +11,7 @@ export default function App() {
 
   return (
     <>
+      <div className="gradient"/>
       <main>
         <Landing />
         <Article />

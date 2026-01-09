@@ -12,6 +12,7 @@ aside {
     align-items: center;
     text-align: center;
 
+    width: 100%;
     height: calc(100dvh - var(--padding) * 2);
     padding: var(--padding) 0;
     gap: 1rem;
@@ -24,12 +25,30 @@ aside {
 
     nav {
         display: flex;
+        flex-wrap: wrap;
+
         gap: 0.5rem;
         justify-content: center;
     }    
 
     @media (max-width: 1360px) {
-        position: static;
+        position: relative;
+        hgroup, nav {
+            margin-left: 50%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        hgroup, nav {
+            margin-left: unset;
+        }
+
+        nav button {
+            font-size: 0.8rem;
+            svg {
+                width: 18px;
+            }
+        }
     }
 }
 
@@ -69,9 +88,27 @@ svg#hero {
         }
     }
 
-    // #balloons-top-shine {
-    //     display: none;
-    // }
+    #balloons-top-shine {
+        display: none;
+    }
+
+    @media (max-width: 1360px) {
+        width: 120vw;
+        left: -10vw;
+    }
+
+    @media (max-width: 640px) {
+        width: 40rem;
+
+        left: 0;
+        top: -10vh;
+
+        #balloons-top {
+            translate: -35rem 10rem;
+            rotate: -30deg;
+            scale: 1.3;
+        }
+    }
 }
 
 @keyframes hero-avatar-breath {
