@@ -9,11 +9,11 @@ article {
     gap: 1.5rem;
 
     @media (max-width: 1360px) {
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
 
     @media (max-width: 640px) {
-        padding: 0;
+        padding: 1rem 0;
     }
 }
 

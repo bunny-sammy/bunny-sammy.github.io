@@ -8,6 +8,7 @@ import Email from "../assets/mail.svg?react";
 import Github from "../assets/github.svg?react";
 import Linkedin from "../assets/linkedin.svg?react";
 import Instagram from "../assets/instagram.svg?react";
+import Down from "../assets/down.svg?react";
 
 export default function Landing() {
   const { i18n, t } = useTranslation();
@@ -19,26 +20,29 @@ export default function Landing() {
         <h1 className="playwrite">
           David Coelho
         </h1>
-        <h2>{t(`landing.occupation`)}</h2>
+        <h2>{t(`landing.occupation`)}</h2>      
+        <nav>
+          <button>
+            <Resume />
+            Currículo
+          </button>
+          <button>
+            <Email />
+          </button>
+          <button>
+            <Linkedin />
+          </button>
+          <button>
+            <Github />
+          </button>
+          <button>
+            <Instagram />
+          </button>
+        </nav>
+        <a href="#article" id="down">
+          <Down />
+        </a>
       </hgroup>
-      <nav>
-        <button>
-          <Resume />
-          Currículo
-        </button>
-        <button>
-          <Email />
-        </button>
-        <button>
-          <Linkedin />
-        </button>
-        <button>
-          <Github />
-        </button>
-        <button>
-          <Instagram />
-        </button>
-      </nav>
     </aside>
   )
 }

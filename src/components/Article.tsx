@@ -12,7 +12,7 @@ export default function Article() {
   const { i18n, t } = useTranslation();
 
   return (
-    <article>
+    <article id="article">
         <div className="article-card">
           <hgroup>
             <About />
