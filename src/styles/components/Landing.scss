@@ -68,6 +68,10 @@ aside {
 
         margin-top: 0.5rem;
         color: color(text2);
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: down-idle 7s linear infinite;
+        }
     
         @media (min-width: 1360px) {
             display: none;
@@ -179,5 +183,35 @@ svg#hero {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes down-idle {
+    80% {
+        transform: translateY(0);
+    }
+    85% {
+        transform: translateY(0.55rem);
+    }
+    87% {
+        transform: translateY(0.6rem);
+    }
+    89% {
+        transform: translateY(-0.3rem);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    95% {
+        transform: translateY(0.55rem);
+    }
+    97% {
+        transform: translateY(0.6rem);
+    }
+    99% {
+        transform: translateY(-0.3rem);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

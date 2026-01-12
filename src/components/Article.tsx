@@ -7,6 +7,7 @@ import Tools from "../assets/tools.svg?react";
 import Projects from "../assets/projects.svg?react";
 import Labs from "../assets/labs.svg?react";
 import Contact from "../assets/contact.svg?react";
+import ContactList from "./ContactList";
 
 export default function Article() {
   const { i18n, t } = useTranslation();
@@ -48,6 +49,10 @@ export default function Article() {
             <Contact />
             <h3>Contato</h3>
           </hgroup>
+          <p>
+            Na internet toda ideia tem seu lugar e sua audiência, por mais única que seja. Vamos criar algo incrível juntos!
+          </p>
+          <ContactList />
         </div>
     </article>
   )
