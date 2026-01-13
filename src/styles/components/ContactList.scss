@@ -1,14 +1,11 @@
 @use "../abstract" as *;
 
 .contact-list {
-    appearance: none;
-    margin: unset;
-    padding: unset;
-
     display: flex;
     flex-direction: column;
     margin-top: .25rem;
     gap: .15rem;
+    width: fit-content;
 
     a {
         display: flex;

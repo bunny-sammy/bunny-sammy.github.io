@@ -49,12 +49,12 @@ h2 {
   font-weight: 500;
 }
 
-h3 {
+h3, h4 {
   margin: unset;
   font-weight: 600;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin-bottom: 0.25rem;
 }
 
@@ -64,6 +64,16 @@ p {
 
 img {
   pointer-events: none;
+}
+
+ul {
+  appearance: none;
+  margin: unset;
+  padding: unset;
+
+  li {
+    list-style: none;
+  }
 }
 
 button {

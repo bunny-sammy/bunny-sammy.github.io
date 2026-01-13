@@ -1,0 +1,47 @@
+@use "../abstract" as *;
+
+.tools-list {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 0.25rem;
+    margin: .25rem 0;
+
+    h4 {        
+        display: flex;
+        gap: .25rem;
+        color: color(text2);
+        margin: unset;
+    }
+
+    ul {
+        display: flex;
+        gap: 0.3rem 0.5rem;
+        flex-wrap: wrap;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+
+            &:not(:last-child)::after {
+                content: "·";
+                display: inline-block;
+                margin-left: .25rem;
+                color: color(text2);
+            }
+        }
+    }
+
+    svg {
+        width: 20px;
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+
+        h4 {
+            margin-top: .25rem;
+            margin-bottom: unset;
+        }
+    }
+}

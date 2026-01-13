@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-import '../styles/components/ContactList.scss'
-import Email from "../assets/mail.svg?react";
-import Github from "../assets/github.svg?react";
-import Linkedin from "../assets/linkedin.svg?react";
-import Instagram from "../assets/instagram.svg?react";
+import '../styles/components/ContactList.scss';
+import Email from "../assets/svg/mail.svg?react";
+import Github from "../assets/svg/github.svg?react";
+import Linkedin from "../assets/svg/linkedin.svg?react";
+import Instagram from "../assets/svg/instagram.svg?react";
 
 export default function ContactList() {
     // const { i18n, t } = useTranslation();

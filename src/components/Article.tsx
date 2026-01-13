@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 // import { useState } from 'react'
 
 import '../styles/components/Article.scss'
-import About from "../assets/user.svg?react";
-import Tools from "../assets/tools.svg?react";
-import Projects from "../assets/projects.svg?react";
-import Labs from "../assets/labs.svg?react";
-import Contact from "../assets/contact.svg?react";
+import About from "../assets/svg/user.svg?react";
+import Tools from "../assets/svg/tools.svg?react";
+import Projects from "../assets/svg/projects.svg?react";
+import Labs from "../assets/svg/labs.svg?react";
+import Contact from "../assets/svg/contact.svg?react";
 import ContactList from "./ContactList";
+import ToolsList from "./ToolsList";
 
 export default function Article() {
   const { i18n, t } = useTranslation();
@@ -29,8 +30,9 @@ export default function Article() {
         <div className="article-card">
           <hgroup>
             <Tools />
-            <h3>Ferramentas</h3>
+            <h3>Habilidades</h3>
           </hgroup>
+            <ToolsList />
         </div>
         <div className="article-card">
           <hgroup>
