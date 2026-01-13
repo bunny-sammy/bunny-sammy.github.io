@@ -56,6 +56,9 @@ export default function Article() {
           </p>
           <ContactList />
         </div>
+        <p id="copyright">
+          © {new Date().getFullYear()} David Coelho. Todos os direitos reservados.
+        </p>
     </article>
   )
 }
