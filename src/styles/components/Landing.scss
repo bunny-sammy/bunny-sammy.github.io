@@ -4,7 +4,7 @@ aside {
     --padding: 5vh;
 
     position: fixed;
-    left: 3vw;
+    left: 2vw;
     width: 30vw;
 
     display: flex;
@@ -13,10 +13,13 @@ aside {
     align-items: center;
     text-align: center;
 
-    // width: 100%;
     height: calc(100svh - var(--padding) * 2);
     padding: var(--padding) 0;
     gap: 1rem;
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation: landing-fade-in .75s 0s 1 ease-out;
+    }
 
     hgroup {
         background: linear-gradient(
@@ -153,6 +156,17 @@ svg#hero {
             rotate: -30deg;
             scale: 1.3;
         }
+    }
+}
+
+@keyframes landing-fade-in {
+    0% {
+        opacity: 0;
+        scale: 1.3;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
     }
 }
 

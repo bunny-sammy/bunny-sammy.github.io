@@ -5,6 +5,7 @@ article {
     flex-direction: column;
     z-index: 10;
 
+    width: 100%;
     padding: 2rem;
     gap: 1.5rem;
 
@@ -40,6 +41,27 @@ article {
     @media (max-width: 640px) {
         box-shadow: shadow(card2);
     }
+
+    &:nth-child(5n-4) {
+        --delay: .15s;
+    }
+    &:nth-child(5n-3) {
+        --delay: .20s;
+    }
+    &:nth-child(5n-2) {
+        --delay: .25s;
+    }
+    &:nth-child(5n-1) {
+        --delay: .30s;
+    }
+    &:nth-child(5n) {
+        --delay: .35s;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation: card-fade-in .25s var(--delay) 1 ease-out;
+        animation-fill-mode: backwards;
+    }
 }
 
 #copyright {
@@ -47,4 +69,19 @@ article {
     margin: 0;
     text-align: center;
     font-size: .85rem;
+}
+
+@keyframes card-fade-in {
+    0% {
+        translate: 10rem 0;
+        opacity: 0;
+    }
+    70% {
+        translate: -1rem 0;
+        opacity: 1;
+    }
+    100% {
+        translate: 0;
+        opacity: 1;
+    }
 }

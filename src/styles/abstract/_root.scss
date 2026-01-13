@@ -26,15 +26,6 @@
   font-family: "Playwrite US Trad", cursive, sans-serif;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
 ::selection {
   color: color(text3);
   background: color(selection);
@@ -46,4 +37,21 @@
 ::-webkit-selection {
   color: color(text3);
   background: color(selection);
+}
+
+body.firefox * {
+  scrollbar-width: thin;
+  scrollbar-color: color(text1) transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: color(text1);
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
