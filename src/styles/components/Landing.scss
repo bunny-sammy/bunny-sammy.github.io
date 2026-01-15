@@ -42,12 +42,12 @@ aside {
         gap: 0.5rem;
         justify-content: center;
 
-        button {
+        a {
             display: flex;
             align-items: center;
             gap: 0.25rem;
 
-            background-color: color(bg3);
+            background-color: color(background2);
             padding: 0.45rem 0.55rem;
             border-radius: 0.5rem;
             border: 1px solid color(text1);

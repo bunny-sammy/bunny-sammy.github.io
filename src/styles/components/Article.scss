@@ -10,6 +10,7 @@ article {
     gap: 1.5rem;
 
     @media (max-width: 1360px) {
+        width: unset;
         padding: 1rem 2rem;
     }
 

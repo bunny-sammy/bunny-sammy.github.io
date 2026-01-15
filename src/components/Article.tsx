@@ -21,7 +21,7 @@ export default function Article() {
             <h3>Sobre</h3>
           </hgroup>
           <p>
-            Olá! Eu sou David Coelho, recém formado em Ciência da Computação, desebvikvedor web focado em experiência de usuário e artista por hobby de longa data.
+            Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.
           </p>
           <p>
             Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias.

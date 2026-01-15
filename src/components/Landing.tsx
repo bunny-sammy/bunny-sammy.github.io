@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 // import { useState } from 'react'
+import { LINKS } from "../scripts/utils";
 
 import '../styles/components/Landing.scss'
 import Hero from "../assets/svg/hero.svg?react";
@@ -22,22 +23,22 @@ export default function Landing() {
         </h1>
         <h2>{t(`landing.occupation`)}</h2>      
         <nav>
-          <button>
+          <a target="_blank" href={LINKS['resume']}>
             <Resume />
             Currículo
-          </button>
-          <button>
+          </a>
+          <a target="_blank" href={LINKS['email']}>
             <Email />
-          </button>
-          <button>
+          </a>
+          <a target="_blank" href={LINKS['linkedin']}>
             <Linkedin />
-          </button>
-          <button>
+          </a>
+          <a target="_blank" href={LINKS['github']}>
             <Github />
-          </button>
-          <button>
+          </a>
+          <a target="_blank" href={LINKS['instagram']}>
             <Instagram />
-          </button>
+          </a>
         </nav>
         <a href="#article" id="down">
           <Down />

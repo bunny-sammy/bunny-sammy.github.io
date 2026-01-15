@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { LINKS } from "../scripts/utils";
 
 import '../styles/components/ContactList.scss';
 import Email from "../assets/svg/mail.svg?react";
@@ -11,19 +12,19 @@ export default function ContactList() {
 
     return (
         <ul className="contact-list">
-            <a>
+            <a target="_blank" href={LINKS['email']}>
                 <Email />
                 dsamuel.coelho@hotmail.com
             </a>
-            <a>
+            <a target="_blank" href={LINKS['linkedin']}>
                 <Linkedin />
                 in/dsam.coelho
             </a>
-            <a>
+            <a target="_blank" href={LINKS['github']}>
                 <Github />
                 bunny-sammy
             </a>
-            <a>
+            <a target="_blank" href={LINKS['instagram']}>
                 <Instagram />
                 bunnysammy_
             </a>
