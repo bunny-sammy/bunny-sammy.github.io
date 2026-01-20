@@ -28,7 +28,7 @@ input {
     caret-color: color(text2);
 }
 
-button, a, input, select, textarea {
+button, a, input, select, textarea, .project-card {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -80,6 +80,20 @@ button {
   font: inherit;
   color: inherit;
   border: unset;
+  background-color: color(background2);
+}
+
+.hover-effect {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:not(:has(.hover-effect:hover)):hover {
+      transform: translate(-3px, -3px);
+      box-shadow: shadow(button3);
+    }
+  }
 }
 
 .disable-select {

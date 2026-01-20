@@ -3,15 +3,53 @@
         "occupation": "Desenvolvedor Frontend"
     },
     "about": {
-        "title": "Sobre Mim"
+        "title": "Sobre"
+    },
+    "tools": {
+        "title": "Habilidades",
+        "sections": {
+            "frontend": "Frontend",
+            "backend": "Brontend",
+            "database": "Banco de Dados",
+            "tools": "Ferramentas",
+            "essentials": "Essenciais"
+        },
+        "tags": {
+            "react": "React",
+            "blade": "Laravel Blade",
+            "ts": "TypeScript",
+            "js": "JavaScript",
+            "ajax": "Ajax",
+            "jquery": "JQuery",
+            "chartjs": "ChartJS",
+            "scss": "SCSS",
+            "tailwind": "Tailwind",
+            "html": "HTML5",
+            "css": "CSS3",
+            "laravel": "Laravel",
+            "next": "Next",
+            "django": "Django",
+            "mongodb": "MongoDB",
+            "postgres": "PostgreSQL",
+            "git": "Git",
+            "vercel": "Vercel",
+            "figma": "Figma",
+            "affinity": "Affinity 3.0",
+            "responsive": "Design Responsivo",
+            "components": "Arquitetura em Componentes",
+            "prototyping": "Prototipação",
+            "vectors": "Ilustração Vetorial",
+            "motion": "Motion Design"
+        }
     },
     "projects": {
-        "title": "Projetos"        
-    },
-    "projectdata": {
-        "tavern-talk": {
-            "name": "Tavern Talk",
-            "description": "Gere fichas de RPG de mesa através de uma conversa amigável"
+        "title": "Projetos",
+
+        "data": {
+            "pokesort": {
+                "title": "Pokesort",
+                "description": "Desafie seus conhecimentos no Pokesort, um puzzle diário de associação de Pokémon. Agrupe os Pokémon na grade de acordo com suas características em comum."
+            }
         }
     }
 }

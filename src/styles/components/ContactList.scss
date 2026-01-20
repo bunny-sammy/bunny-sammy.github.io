@@ -4,23 +4,20 @@
     display: flex;
     flex-direction: column;
     margin-top: .25rem;
-    gap: .15rem;
     width: fit-content;
+    gap: .15rem;
 
     a {
         display: flex;
         align-items: center;
-        gap: .5rem;
         cursor: pointer;
 
-        transition: padding-left 0.15s ease-out;
+        gap: .5rem;
+        padding: 0 .5rem .25rem 0;
+        border-radius: 0 0 .5rem 0;
 
         svg {
             width: 20px;
-        }
-
-        &:hover {
-            padding-left: .75rem;
         }
     }
 }

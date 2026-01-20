@@ -9,6 +9,7 @@ import Labs from "../assets/svg/labs.svg?react";
 import Contact from "../assets/svg/contact.svg?react";
 import ContactList from "./ContactList";
 import ToolsList from "./ToolsList";
+import ProjectsList from "./ProjectsList";
 
 export default function Article() {
   const { i18n, t } = useTranslation();
@@ -39,6 +40,10 @@ export default function Article() {
             <Projects />
             <h3>Projetos</h3>
           </hgroup>
+          <p>
+            Você pode conhecer melhor o meu trabalho a partir destes projetos.
+          </p>
+          <ProjectsList />
         </div>
         <div className="article-card">
           <hgroup>
