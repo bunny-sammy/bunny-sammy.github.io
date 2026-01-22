@@ -30,15 +30,17 @@
     flex-direction: column;
 
     background-color: color(background2);
-    width: min(920px, 80vw);
+    width: min(var(--modal-width, 1020px), 80vw);
     height: min(640px, 80vh);
     padding: .5rem;
     border-radius: 0.5rem;
     border: 1px solid color(text1);
     box-shadow: shadow(card1);
 
-    &.open {
-        animation: modal-open 0.35s 0s 1;
+    @media (prefers-reduced-motion: no-preference) {
+        &.open {
+            animation: modal-open 0.35s 0s 1;
+        }
     }
 
     .modal-header {
@@ -59,11 +61,12 @@
     }
 
     .modal-content {
-        overflow-x: visible;
+        overflow-x: hidden;
         overflow-y: auto;
 
         height: 100%;
         padding: .5rem;
+        margin-bottom: .5rem;
     }
 
     @media (max-width: 640px) {
@@ -78,8 +81,11 @@
         transform: scale(0);
         opacity: 0;
     }
-    85% {
-        transform: scale(1.05);
+    80% {
+        transform: scale(1.10);
+    }
+    90% {
+        transform: scale(0.99)
     }
     100% {
         transform: scale(1);

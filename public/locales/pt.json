@@ -44,6 +44,15 @@
             "motion": "Motion Design"
         }
     },
+    "labs": {
+        "title": "Experimentos",
+
+        "data": {
+            "digital-gallery": {
+                "title": "Galeria Digital com Canvas Infinito"
+            }
+        }
+    },
     "projects": {
         "title": "Projetos",
 
@@ -84,5 +93,8 @@
                 "body": "Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB."
             }
         }
+    },
+    "contact": {
+        "title": "Contato"
     }
 }

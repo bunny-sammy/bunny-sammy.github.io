@@ -12,19 +12,19 @@ export default function ContactList() {
 
     return (
         <ul className="contact-list">
-            <a target="_blank" className="hover-effect" href={LINKS['email']}>
+            <a target="_blank" className="hover-effect accent" href={LINKS['email']}>
                 <Email />
                 dsamuel.coelho@hotmail.com
             </a>
-            <a target="_blank" className="hover-effect" href={LINKS['linkedin']}>
+            <a target="_blank" className="hover-effect accent" href={LINKS['linkedin']}>
                 <Linkedin />
                 in/dsam.coelho
             </a>
-            <a target="_blank" className="hover-effect" href={LINKS['github']}>
+            <a target="_blank" className="hover-effect accent" href={LINKS['github']}>
                 <Github />
                 bunny-sammy
             </a>
-            <a target="_blank" className="hover-effect" href={LINKS['instagram']}>
+            <a target="_blank" className="hover-effect accent" href={LINKS['instagram']}>
                 <Instagram />
                 bunnysammy_
             </a>

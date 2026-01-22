@@ -45,7 +45,8 @@ export default function ProjectCard({ project, showButtons=true, onClick }: Proj
                             {t(`projects.data.${project.id}.title`)}
                             {showButtons && <div className="buttons">
                                 {project.links.map((link: Link) => (
-                                    <a key={link.type} target="_blank" className="hover-effect" href={link.url}>
+                                    <a key={link.type} target="_blank" className="hover-effect accent"
+                                        href={link.url} onClick={(e) => e.stopPropagation()}>
                                         <LinkIcon type={link.type} />
                                     </a>
                                 ))}

@@ -51,6 +51,9 @@ export default function Article() {
             <Labs />
             <h3>Experimentos</h3>
           </hgroup>
+          <p>
+            Aqui estão reunidas algumas páginas que criei para estudar algum conceito específico.
+          </p>
         </div>
         <div className="article-card">
           <hgroup>

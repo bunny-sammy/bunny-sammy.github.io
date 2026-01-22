@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Modal from "./Modal";
 
 import '../styles/components/ProjectsList.scss';
@@ -16,15 +16,28 @@ interface ProjectsModalProps {
 }
 
 function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectId}: ProjectsModalProps) {
+    const {t} = useTranslation();
+    
+    const projectsOrdered = [...PROJECTS]
+        .sort((a: Project, b: Project) => t(`projects.data.${a.id}.title`).localeCompare(t(`projects.data.${b.id}.title`)))
+        .sort((a: Project, b: Project) => b.year - a.year);
+    
     const prepareProjectsModal = (projectId: string | undefined = undefined) => {
         setCurrentProjectId(projectId);
     }
+
+    const currentProject: Project | null = useMemo(() => {
+        if (currentProjectId == undefined) return null;
+
+        const filteredProjects = [...PROJECTS].filter((p: Project) => p.id == currentProjectId);
+        console.log(filteredProjects[0]);
+        return filteredProjects[0];
+    }, [currentProjectId, PROJECTS])
     
     return (
         <Modal id="modal" title="Navegar Projetos" isOpen={isOpen} setIsOpen={setIsOpen}>
-            {currentProjectId}
-            <ul className="projects-modal-list">
-                {PROJECTS.map((project: Project) => (
+            <ul className={`projects-modal-list ${!currentProjectId ? "active" : ""}`}>
+                {projectsOrdered.map((project: Project) => (
                     <ProjectCard key={project.id} project={project} onClick={() => prepareProjectsModal(project.id)} />
                 ))}
             </ul>
@@ -33,7 +46,7 @@ function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectI
 }
 
 export default function ProjectsList() {
-    const projectsPreview = PROJECTS.slice(0, 3);
+    const projectsPreview = [...PROJECTS].slice(0, 3);
     const [openProjectsModal, setOpenProjectsModal] = useState<boolean>(false);
     const [currentProjectId, setCurrentProjectId] = useState<string>();
 

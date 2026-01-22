@@ -85,7 +85,11 @@ button {
 
 .accent {
   color: color(accent1);
-  font-weight: bold;
+  font-weight: 550;
+
+  svg, path, g {
+      stroke-width: 2;
+  }
 }
 
 .hover-effect {
