@@ -1,0 +1,46 @@
+@use "../abstract" as *;
+
+.project-details {
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-color: color(background2);
+    width: 100%;
+    min-height: calc(100% - 2rem);
+
+    &.active {
+        animation: projects-details-fade-in 0.3s 0s ease 1;
+    }
+
+    &:not(.active) {
+        animation: projects-details-fade-out 0.3s 0s ease 1;
+        display: none;
+    }
+}
+
+@keyframes projects-details-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+        display: flex;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        display: flex;
+    }
+}
+@keyframes projects-details-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(200%);
+        display: flex;
+    }
+}

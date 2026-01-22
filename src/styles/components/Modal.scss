@@ -61,6 +61,7 @@
     }
 
     .modal-content {
+        position: relative;
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -70,7 +71,7 @@
     }
 
     @media (max-width: 640px) {
-        width: calc(100% - 3rem);
+        width: calc(100% - 1.85rem);
         height: 90svh;
         box-shadow: shadow(card2);
     }

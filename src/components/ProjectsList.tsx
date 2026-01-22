@@ -7,6 +7,7 @@ import ProjectCard from "./ProjectCard";
 import Down from "../assets/svg/down.svg?react";
 import { PROJECTS } from "../scripts/utils";
 import { Project } from "../types/projects";
+import ProjectDetails from "./ProjectDetails";
 
 interface ProjectsModalProps {
     isOpen: boolean;
@@ -26,6 +27,10 @@ function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectI
         setCurrentProjectId(projectId);
     }
 
+    const goBack = () => {
+        setCurrentProjectId(undefined);
+    }
+
     const currentProject: Project | null = useMemo(() => {
         if (currentProjectId == undefined) return null;
 
@@ -36,6 +41,10 @@ function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectI
     
     return (
         <Modal id="modal" title="Navegar Projetos" isOpen={isOpen} setIsOpen={setIsOpen}>
+            <ProjectDetails
+                project={currentProject}
+                goBack={goBack}
+            />
             <ul className={`projects-modal-list ${!currentProjectId ? "active" : ""}`}>
                 {projectsOrdered.map((project: Project) => (
                     <ProjectCard key={project.id} project={project} onClick={() => prepareProjectsModal(project.id)} />
