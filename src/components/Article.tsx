@@ -10,16 +10,17 @@ import Contact from "../assets/svg/contact.svg?react";
 import ContactList from "./ContactList";
 import ToolsList from "./ToolsList";
 import ProjectsList from "./ProjectsList";
+import Modal from "./Modal";
 
 export default function Article() {
   const { i18n, t } = useTranslation();
 
   return (
-    <article id="article">
+    <article id="article">        
         <div className="article-card">
           <hgroup>
             <About />
-            <h3>Sobre</h3>
+            <h3>{t(`about.title`)}</h3>
           </hgroup>
           <p>
             Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.

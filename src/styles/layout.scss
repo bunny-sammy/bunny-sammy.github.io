@@ -83,6 +83,11 @@ button {
   background-color: color(background2);
 }
 
+.accent {
+  color: color(accent1);
+  font-weight: bold;
+}
+
 .hover-effect {
   transition:
     transform 0.3s ease,

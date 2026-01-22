@@ -5,6 +5,7 @@ export type Link = {
 
 export type Project = {
     id: string,
+    year: number,
     tags: string[],
     links: Link[]
 }

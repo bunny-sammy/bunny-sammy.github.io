@@ -17,6 +17,7 @@
         "tags": {
             "react": "React",
             "blade": "Laravel Blade",
+            "expo": "Expo",
             "ts": "TypeScript",
             "js": "JavaScript",
             "ajax": "Ajax",
@@ -31,6 +32,7 @@
             "django": "Django",
             "mongodb": "MongoDB",
             "postgres": "PostgreSQL",
+            "mysql": "MySQL",
             "git": "Git",
             "vercel": "Vercel",
             "figma": "Figma",
@@ -45,10 +47,41 @@
     "projects": {
         "title": "Projetos",
 
-        "data": {
+        "data": {            
+            "portfolio": {
+                "title": "Este Portfólio",
+                "description": "",
+                "body": ""
+            },
             "pokesort": {
                 "title": "Pokesort",
-                "description": "Desafie seus conhecimentos no Pokesort, um puzzle diário de associação de Pokémon. Agrupe os Pokémon na grade de acordo com suas características em comum."
+                "description": "Desafie seus conhecimentos no Pokesort, um puzzle diário de associação de Pokémon. Agrupe os Pokémon na grade de acordo com suas características em comum.",
+                "body": ""
+            },
+            "sonhario": {
+                "title": "Sonhario",
+                "description": "",
+                "body": ""
+            },
+            "selecao": {
+                "title": "Seleção - SEDUC/AL",
+                "description": "Sistema que possibilita a criação de editais pela secretaria e a inscrição de usuários candidatos.",
+                "body": ""
+            },
+            "lotacao": {
+                "title": "Perfis de Lotação - SEDUC/AL",
+                "description": "",
+                "body": ""
+            },
+            "safety-net": {
+                "title": "Projeto Safety Net",
+                "description": "",
+                "body": ""
+            },
+            "tavern-talk": {
+                "title": "Tavern Talk",
+                "description": "Gera e armazena seus personagens de RPG de mesa com uma interface que se assemelha a um chat.",
+                "body": "Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB."
             }
         }
     }

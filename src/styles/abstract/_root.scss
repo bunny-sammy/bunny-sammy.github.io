@@ -41,17 +41,17 @@
 
 body.firefox * {
   scrollbar-width: thin;
-  scrollbar-color: color(text1) transparent;
+  scrollbar-color: color(text2) transparent;
 }
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: color(text1);
+  background-color: color(text2);
   border-radius: 4px;
   transition: background-color 0.3s;
 }

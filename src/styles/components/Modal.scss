@@ -1,0 +1,88 @@
+@use "../abstract" as *;
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(color(background1), color(background1), color(modal1));
+
+    width: 100vw;
+    height: 110lvh;
+    margin-top: -5lvh;
+    z-index: 50;
+
+    transition:
+        opacity 0.3s ease;
+
+    &:not(:has(.modal.open)) {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+
+    background-color: color(background2);
+    width: min(920px, 80vw);
+    height: min(640px, 80vh);
+    padding: .5rem;
+    border-radius: 0.5rem;
+    border: 1px solid color(text1);
+    box-shadow: shadow(card1);
+
+    &.open {
+        animation: modal-open 0.35s 0s 1;
+    }
+
+    .modal-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: .5rem;
+
+        & > button {
+            padding: 0 .25rem;
+            margin-right: .5rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            height: fit-content;
+        }
+    }
+
+    .modal-content {
+        overflow-x: visible;
+        overflow-y: auto;
+
+        height: 100%;
+        padding: .5rem;
+    }
+
+    @media (max-width: 640px) {
+        width: calc(100% - 3rem);
+        height: 90svh;
+        box-shadow: shadow(card2);
+    }
+}
+
+@keyframes modal-open {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    85% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

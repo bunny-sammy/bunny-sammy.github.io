@@ -10,6 +10,7 @@ $colors: (
     text4: #798bab,
     accent1: #f87f97,
     accent2: #fca6b6,
+    modal1: #dcebf395,
     selection: rgba(248, 127, 145, 0.5)
 );
 
@@ -22,7 +23,7 @@ $shadow: (
     card2: 0px 5px 0px 0px color(text1),
     button1: 0px 2px 0px 0px color(text1),
     button2: 0px 0px 0px 0px color(text1),
-    button3: 3px 3px 0px 0px color(text2)
+    button3: 2px 2px 3px 0px color(text2)
 );
 
 @function shadow($key) {
