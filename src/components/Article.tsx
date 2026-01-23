@@ -10,10 +10,10 @@ import Contact from "../assets/svg/contact.svg?react";
 import ContactList from "./ContactList";
 import ToolsList from "./ToolsList";
 import ProjectsList from "./ProjectsList";
-import Modal from "./Modal";
+import LabsList from "./LabsList";
 
 export default function Article() {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <article id="article">        
@@ -23,50 +23,51 @@ export default function Article() {
             <h3>{t(`about.title`)}</h3>
           </hgroup>
           <p>
-            Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.
+            {t(`about.body.0`)}
           </p>
           <p>
-            Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias.
+            {t(`about.body.1`)}
           </p>
         </div>
         <div className="article-card">
           <hgroup>
             <Tools />
-            <h3>Habilidades</h3>
+            <h3>{t(`tools.title`)}</h3>
           </hgroup>
             <ToolsList />
         </div>
         <div className="article-card">
           <hgroup>
             <Projects />
-            <h3>Projetos</h3>
+            <h3>{t(`projects.title`)}</h3>
           </hgroup>
           <p>
-            Você pode conhecer melhor o meu trabalho a partir destes projetos.
+            {t(`projects.body.0`)}
           </p>
           <ProjectsList />
         </div>
         <div className="article-card">
           <hgroup>
             <Labs />
-            <h3>Experimentos</h3>
+            <h3>{t(`labs.title`)}</h3>
           </hgroup>
           <p>
-            Aqui estão reunidas algumas páginas que criei para estudar algum conceito específico.
+            {t(`labs.body.0`)}
           </p>
+          <LabsList />
         </div>
         <div className="article-card">
           <hgroup>
             <Contact />
-            <h3>Contato</h3>
+            <h3>{t(`contact.title`)}</h3>
           </hgroup>
           <p>
-            Na internet toda ideia tem seu lugar e sua audiência, por mais única que seja. Vamos criar algo incrível juntos!
+            {t(`contact.body.0`)}
           </p>
           <ContactList />
         </div>
         <p id="copyright">
-          © {new Date().getFullYear()} David Coelho. Todos os direitos reservados.
+          © {new Date().getFullYear()} David Coelho. {t(`contact.copyright`)}
         </p>
     </article>
   )

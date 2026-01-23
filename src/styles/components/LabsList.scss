@@ -1,0 +1,31 @@
+@use "../abstract" as *;
+
+ul.labs-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .labs-card {
+        background-color: color(background3);
+        border-radius: .5rem;
+        padding: .5rem;
+    }
+
+    ul.lab-tags {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.15rem 0.5rem;
+        font-size: 0.75rem;
+        color: color(text2);
+
+        li {
+            &:not(:last-child)::after {
+                content: "·";
+                display: inline-block;
+                margin-left: .25rem;
+                color: color(text2);
+            }
+        }
+    }
+}
