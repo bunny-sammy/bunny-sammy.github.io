@@ -21,7 +21,7 @@
         flex-direction: column;
         padding: .25rem;
 
-        h3 {
+        h4 {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -81,6 +81,7 @@
 
     p {
         font-size: 0.75rem;
+        margin-bottom: 0;
     }
 
     @container project-card (width < 600px) {

@@ -35,12 +35,11 @@ function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectI
         if (currentProjectId == undefined) return null;
 
         const filteredProjects = [...PROJECTS].filter((p: Project) => p.id == currentProjectId);
-        console.log(filteredProjects[0]);
         return filteredProjects[0];
     }, [currentProjectId, PROJECTS])
     
     return (
-        <Modal id="modal" title="Navegar Projetos" isOpen={isOpen} setIsOpen={setIsOpen}>
+        <Modal id="modal" title={t(`projects.modal.header`)} isOpen={isOpen} setIsOpen={setIsOpen}>
             <ProjectDetails
                 project={currentProject}
                 goBack={goBack}

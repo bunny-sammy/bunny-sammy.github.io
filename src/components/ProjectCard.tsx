@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 import '../styles/components/ProjectCard.scss';
 import Github from "../assets/svg/github.svg?react";
 import View from "../assets/svg/view.svg?react";
 import { Link, Project } from "../types/projects";
-import { useEffect, useState } from "react";
 import fallback from '../assets/img/fallback.png';
 
 interface ProjectCardProps {
@@ -24,7 +24,7 @@ function LinkIcon({type}: {type: "github" | "view"}) {
 
 export default function ProjectCard({ project, showButtons=true, onClick }: ProjectCardProps) {
     const {t} = useTranslation();
-    const url = `${import.meta.env.VITE_HOST}/img/projects/${project.id}.png`
+    const url = `${import.meta.env.VITE_HOST}/img/thumbs/${project.id}.png`
     const [loadedImage, setLoadedImage] = useState<string | null>(null);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export default function ProjectCard({ project, showButtons=true, onClick }: Proj
                 <img src={loadedImage || fallback} />
                 <div>
                     <hgroup>
-                        <h3>
+                        <h4>
                             {t(`projects.data.${project.id}.title`)}
                             {showButtons && <div className="buttons">
                                 {project.links.map((link: Link) => (
@@ -51,7 +51,7 @@ export default function ProjectCard({ project, showButtons=true, onClick }: Proj
                                     </a>
                                 ))}
                             </div>}
-                        </h3>
+                        </h4>
                         <ul className="project-tags">
                             <li key="year">{project.year}</li>
                             {project.tags.map((tag: string) => (

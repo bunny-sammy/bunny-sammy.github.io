@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { LINKS } from "../scripts/utils";
 
 import '../styles/components/ContactList.scss';
@@ -8,8 +7,6 @@ import Linkedin from "../assets/svg/linkedin.svg?react";
 import Instagram from "../assets/svg/instagram.svg?react";
 
 export default function ContactList() {
-    // const { i18n, t } = useTranslation();
-
     return (
         <ul className="contact-list">
             <a target="_blank" className="hover-effect accent" href={LINKS['email']}>

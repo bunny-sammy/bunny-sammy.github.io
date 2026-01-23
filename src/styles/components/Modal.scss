@@ -62,11 +62,9 @@
 
     .modal-content {
         position: relative;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
 
-        height: 100%;
-        padding: .5rem;
+        height: 100%;        
         margin-bottom: .5rem;
     }
 
@@ -82,11 +80,8 @@
         transform: scale(0);
         opacity: 0;
     }
-    80% {
+    85% {
         transform: scale(1.10);
-    }
-    90% {
-        transform: scale(0.99)
     }
     100% {
         transform: scale(1);

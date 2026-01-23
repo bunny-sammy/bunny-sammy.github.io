@@ -3,7 +3,11 @@
         "occupation": "Desenvolvedor Frontend"
     },
     "about": {
-        "title": "Sobre"
+        "title": "Sobre",
+        "body": {
+            "0": "Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.",
+            "1": "Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias."
+        }
     },
     "tools": {
         "title": "Habilidades",
@@ -20,6 +24,7 @@
             "expo": "Expo",
             "ts": "TypeScript",
             "js": "JavaScript",
+            "framer-motion": "Framer Motion",
             "ajax": "Ajax",
             "jquery": "JQuery",
             "chartjs": "ChartJS",
@@ -46,15 +51,27 @@
     },
     "labs": {
         "title": "Experimentos",
+        "body": {
+            "0": "Aqui estão reunidas algumas páginas que criei para estudar algum conceito específico."
+        },
 
         "data": {
-            "digital-gallery": {
+            "virtual-gallery": {
                 "title": "Galeria Digital com Canvas Infinito"
             }
         }
     },
     "projects": {
         "title": "Projetos",
+        "body": {
+            "0": "Você pode conhecer melhor o meu trabalho a partir destes projetos."
+        },
+
+        "modal": {
+            "header": "Navegar Projetos",
+            "github": "Acessar repositório no GitHub",
+            "view": "Visualizar página publicada"
+        },
 
         "data": {            
             "portfolio": {
@@ -95,6 +112,11 @@
         }
     },
     "contact": {
-        "title": "Contato"
+        "title": "Contato",
+        "body": {
+            "0": "Na internet toda ideia tem seu lugar e sua audiência, por mais única que seja. Vamos criar algo incrível juntos!"
+        },
+
+        "copyright": "Todos os direitos reservados."
     }
 }

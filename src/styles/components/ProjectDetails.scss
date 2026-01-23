@@ -7,8 +7,11 @@
     flex-direction: column;
 
     background-color: color(background2);
-    width: 100%;
-    min-height: calc(100% - 2rem);
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    overflow: auto;
+    padding: .5rem;
+    padding-top: 0;
 
     &.active {
         animation: projects-details-fade-in 0.3s 0s ease 1;
@@ -17,6 +20,125 @@
     &:not(.active) {
         animation: projects-details-fade-out 0.3s 0s ease 1;
         display: none;
+    }
+}
+
+.project-page {
+    position: relative;
+
+    h3 {
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        align-items: center;
+
+        gap: .25rem;
+        margin: 0;
+        font-size: 1.15rem;
+        background-color: color(background2);
+
+        button {
+            aspect-ratio: 1;
+            padding: .25rem;
+            border-radius: .5rem;
+            cursor: pointer;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                translate: 0 .15rem;
+            }
+        }
+    }
+
+    ul.project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.15rem 0.5rem;
+        font-size: 0.75rem;
+        color: color(text2);
+        margin-left: 2rem;
+        margin-bottom: .5rem;
+
+        li {
+            &:not(:last-child)::after {
+                content: "·";
+                display: inline-block;
+                margin-left: .25rem;
+                color: color(text2);
+            }
+        }
+    }
+
+
+    a {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        gap: .5rem;
+        padding: .25rem .35rem;
+        border-radius: .5rem;
+        background-color: color(background3);
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    gap: .5rem;
+
+    div.project-body {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        p {
+            margin: 0;
+            padding: .35rem .75rem;
+            background-color: color(background3);
+            border-radius: .5rem;
+        }
+    }
+
+    ul.project-images {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        img {
+            width: 100%;
+            border-radius: .5rem;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: flex;
+        flex-direction: column-reverse;
+
+        ul.project-images {
+            flex-direction: row;
+            width: 100%;
+            height: 120px;
+            overflow-x: scroll;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
     }
 }
 

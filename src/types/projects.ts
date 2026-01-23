@@ -7,5 +7,6 @@ export type Project = {
     id: string,
     year: number,
     tags: string[],
-    links: Link[]
+    images?: string[],
+    links: Link[],
 }

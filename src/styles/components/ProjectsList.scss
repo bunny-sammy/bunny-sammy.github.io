@@ -36,7 +36,11 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(var(--card-width), 100%), 1fr));
+    padding: .5rem;
     gap: .75rem;
+
+    height: calc(100% - 1rem);
+    overflow: auto;
     
     &.active {
         animation: projects-list-fade-in 0.3s 0s ease 1;

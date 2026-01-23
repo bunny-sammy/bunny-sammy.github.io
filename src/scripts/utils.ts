@@ -10,7 +10,7 @@ export const LINKS: Record<string, string> = {
 } as const;
 
 export const TOOLS: Record<string, string[]> = {
-    'frontend': ["react", "blade", "expo", "ts", "js", "jquery", "chartjs", "scss", "tailwind", "html", "css"],
+    'frontend': ["react", "blade", "expo", "ts", "js", "framer-motion", "jquery", "chartjs", "scss", "tailwind", "html", "css"],
     'backend': ["laravel", "next", "django"],
     'database': ["mongodb", "postgres"],
     'tools': ["git", "vercel", "figma", "affinity"],
@@ -21,7 +21,7 @@ export const LABS: Lab[] = [
     {
         id: "virtual-gallery",
         year: 2025,
-        tags: ["react"],
+        tags: ["react", "framer-motion", "ts", "scss", "responsive", "components"],
         link: "https://bunny-sammy.github.io/galeria-digital"
     }
 ]
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     {
         id: "pokesort",
         year: 2026,
-        tags: ["next", "react", "scss", "mongodb", "ts", "vercel", "responsive", "components"],
+        tags: ["next", "react", "framer-motion", "scss", "mongodb", "ts", "vercel", "responsive", "components"],
         links: [
             {
                 type: "github",
@@ -40,7 +40,8 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://pokesort.com"
             }
-        ]
+        ],
+        images: []
     },
     {
         id: "sonhario",
@@ -55,7 +56,8 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://bunny-sammy.github.io/sonhario-api"
             }
-        ]
+        ],
+        images: []
     },
     {
         id: "tavern-talk",
@@ -70,6 +72,9 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://tavern-talk.vercel.app"
             }
+        ],
+        images: [
+            "taverntalk_1"
         ]
     },
     {
@@ -81,13 +86,15 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://selecao.educacao.al.gov.br/"
             }
-        ]
+        ],
+        images: []
     },
     {
         id: "lotacao",
         year: 2025,
         tags: ["laravel", "blade", "tailwind", "css", "jquery", "js", "mysql"],
-        links: []
+        links: [],
+        images: []
     },
     {
         id: "portfolio",
@@ -102,7 +109,8 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://projetosafetynet.vercel.app"
             }
-        ]
+        ],
+        images: []
     },
     {
         id: "safety-net",
@@ -117,6 +125,7 @@ export const PROJECTS: Project[] = [
                 type: "view",
                 url: "https://projetosafetynet.vercel.app"
             }
-        ]
+        ],
+        images: []
     },    
 ] as const;
