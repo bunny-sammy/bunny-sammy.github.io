@@ -14,7 +14,7 @@ export const TOOLS: Record<string, string[]> = {
     'backend': ["laravel", "next", "django"],
     'database': ["mongodb", "postgres"],
     'tools': ["git", "vercel", "figma", "affinity"],
-    'essentials': ["responsive", "components", "prototyping", "vectors", "motion"]
+    'essentials': ["responsive", "ux", "components", "prototyping", "vectors", "motion"]
 } as const;
 
 export const LABS: Lab[] = [
@@ -41,7 +41,9 @@ export const PROJECTS: Project[] = [
                 url: "https://pokesort.com"
             }
         ],
-        images: []
+        images: [
+            "pokesort_1", "pokesort_2"
+        ]
     },
     {
         id: "sonhario",
@@ -57,7 +59,9 @@ export const PROJECTS: Project[] = [
                 url: "https://bunny-sammy.github.io/sonhario-api"
             }
         ],
-        images: []
+        images: [
+            "sonhario_1", "sonhario_2"
+        ]
     },
     {
         id: "tavern-talk",
@@ -74,7 +78,7 @@ export const PROJECTS: Project[] = [
             }
         ],
         images: [
-            "taverntalk_1"
+            "taverntalk_1", "taverntalk_2"
         ]
     },
     {
@@ -94,23 +98,27 @@ export const PROJECTS: Project[] = [
         year: 2025,
         tags: ["laravel", "blade", "tailwind", "css", "jquery", "js", "mysql"],
         links: [],
-        images: []
+        images: [
+            "lotacao_1"
+        ]
     },
     {
         id: "portfolio",
         year: 2026,
-        tags: ["react", "scss", "ts", "vectors", "responsive", "components"],
+        tags: ["react", "scss", "ts", "vectors", "responsive", "components", "motion"],
         links: [
             {
                 type: "github",
-                url: "https://github.com/omarcosss/safety-net"
+                url: "https://github.com/bunny-sammy/bunny-sammy.github.io"
             },
             {
                 type: "view",
-                url: "https://projetosafetynet.vercel.app"
+                url: "https://bunny-sammy.github.io"
             }
         ],
-        images: []
+        images: [
+            "portfolio_1"
+        ]
     },
     {
         id: "safety-net",
@@ -126,6 +134,8 @@ export const PROJECTS: Project[] = [
                 url: "https://projetosafetynet.vercel.app"
             }
         ],
-        images: []
+        images: [
+            "safety-net_1"
+        ]
     },    
 ] as const;

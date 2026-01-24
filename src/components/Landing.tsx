@@ -12,7 +12,7 @@ import Instagram from "../assets/svg/instagram.svg?react";
 import Down from "../assets/svg/down.svg?react";
 
 export default function Landing() {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <aside>
@@ -25,7 +25,7 @@ export default function Landing() {
         <nav>
           <a target="_blank" href={LINKS['resume']}>
             <Resume />
-            Currículo
+            {t(`contact.resume`)}
           </a>
           <a target="_blank" href={LINKS['email']}>
             <Email />

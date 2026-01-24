@@ -40,3 +40,11 @@ main {
         display: none;
     }
 }
+
+.about-card {
+    p {
+        background-color: color(background3);
+        padding: .35rem .5rem;
+        border-radius: .5rem;
+    }
+}

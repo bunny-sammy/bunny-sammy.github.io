@@ -3,12 +3,13 @@
 ul.labs-list {
     display: flex;
     flex-direction: column;
+    margin-top: .75rem;
     gap: .5rem;
 
     .labs-card {
         background-color: color(background3);
         border-radius: .5rem;
-        padding: .5rem;
+        padding: .35rem .5rem;
     }
 
     ul.lab-tags {

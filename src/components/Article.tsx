@@ -17,17 +17,14 @@ export default function Article() {
 
   return (
     <article id="article">        
-        <div className="article-card">
+        <div className="about-card article-card">
           <hgroup>
             <About />
             <h3>{t(`about.title`)}</h3>
           </hgroup>
-          <p>
-            {t(`about.body.0`)}
-          </p>
-          <p>
-            {t(`about.body.1`)}
-          </p>
+          <p>{t(`about.body.0`)}</p>
+          <p>{t(`about.body.1`)}</p>          
+          <p>{t(`about.body.2`)}</p>
         </div>
         <div className="article-card">
           <hgroup>

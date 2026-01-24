@@ -60,15 +60,15 @@ export default function ProjectDetails ({project, goBack}: ProjectDetailsProps) 
                                 {body}
                             </p>}
                             {project.links.map((link: Link) => (
-                                <a target="_blank" className="hover-effect accent" href={link.url}>
+                                <a key={link.type} target="_blank" className="hover-effect accent" href={link.url}>
                                     <LinkIcon type={link.type} />
                                 </a>
                             ))}
                         </div>
                         <ul className="project-images">
-                            <img src={`img/thumbs/${project.id}.png`} />
+                            <img key="thumb" src={`img/thumbs/${project.id}.png`} />
                             {project.images?.map((image: string) => (
-                                <img src={`img/projects/${image}.png`} />
+                                <img key={image} src={`img/projects/${image}.png`} />
                             ))}
                         </ul>
                     </div>
