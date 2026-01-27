@@ -116,7 +116,7 @@ svg#hero {
         }
     }
 
-    #balloons-top > path {
+    #balloons-top > g {
         transform-origin: left;
         @media (prefers-reduced-motion: no-preference) {
             animation: hero-balloons 6s var(--delay) infinite;
