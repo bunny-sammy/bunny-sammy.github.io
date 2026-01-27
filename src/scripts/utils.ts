@@ -2,7 +2,6 @@ import { Project } from "../types/projects";
 import { Lab } from "../types/labs";
 
 export const LINKS: Record<string, string> = {
-    'resume': 'https://drive.google.com/open?id=1T7dSibxiF5o7TxIXOLjA0ulnf_9WyN8Q&usp=drive_fs',
     'email': 'mailto:dsamuel.coelho@hotmail.com',
     'linkedin': 'https://www.linkedin.com/in/dsamcoelho/',
     'github': 'https://github.com/bunny-sammy',
@@ -14,14 +13,14 @@ export const TOOLS: Record<string, string[]> = {
     'backend': ["laravel", "next", "django"],
     'database': ["mongodb", "postgres"],
     'tools': ["git", "vercel", "figma", "affinity"],
-    'essentials': ["responsive", "ux", "components", "prototyping", "vectors", "motion"]
+    'essentials': ["responsive", "ux", "apis", "components", "prototyping", "vectors", "motion"]
 } as const;
 
 export const LABS: Lab[] = [
     {
         id: "virtual-gallery",
         year: 2025,
-        tags: ["react", "framer-motion", "ts", "scss", "responsive", "components"],
+        tags: ["react", "framer-motion", "ts", "scss", "responsive"],
         link: "https://bunny-sammy.github.io/galeria-digital"
     }
 ]
@@ -30,7 +29,7 @@ export const PROJECTS: Project[] = [
     {
         id: "pokesort",
         year: 2026,
-        tags: ["next", "react", "framer-motion", "scss", "mongodb", "ts", "vercel", "responsive", "components"],
+        tags: ["next", "react", "framer-motion", "scss", "mongodb", "ts", "vercel", "apis", "responsive", "components"],
         links: [
             {
                 type: "github",
@@ -48,7 +47,7 @@ export const PROJECTS: Project[] = [
     {
         id: "sonhario",
         year: 2025,
-        tags: ["django", "expo", "postgres", "ts", "responsive", "components"],
+        tags: ["django", "expo", "postgres", "ts", "apis", "responsive", "components"],
         links: [
             {
                 type: "github",
@@ -66,7 +65,7 @@ export const PROJECTS: Project[] = [
     {
         id: "tavern-talk",
         year: 2024,
-        tags: ["next", "react", "scss", "mongodb", "js", "components", "vercel"],
+        tags: ["next", "react", "scss", "mongodb", "js", "apis", "components", "vercel"],
         links: [
             {
                 type: "github",

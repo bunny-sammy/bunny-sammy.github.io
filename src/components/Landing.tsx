@@ -23,9 +23,9 @@ export default function Landing() {
         </h1>
         <h2>{t(`landing.occupation`)}</h2>      
         <nav>
-          <a target="_blank" href={LINKS['resume']}>
+          <a target="_blank" href={t(`landing.resume.url`)}>
             <Resume />
-            {t(`contact.resume`)}
+            {t(`landing.resume.title`)}
           </a>
           <a target="_blank" href={LINKS['email']}>
             <Email />

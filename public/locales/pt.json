@@ -1,12 +1,17 @@
 {
-    "landing": {        
-        "occupation": "Desenvolvedor Frontend"
+    "landing": {
+        "occupation": "Desenvolvedor Frontend",
+
+        "resume": {
+            "title": "Currículo",
+            "url": "https://docs.google.com/document/d/1p3OgEMeE8OzO_5qnVGunymB7Uq8uyarArOyvgcJFRII/edit?pli=1&tab=t.0"
+        }
     },
     "about": {
         "title": "Sobre Mim",
         "body": {
             "0": "Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.",
-            "1": "Desde muito pequeno tenho curiosidade pela criação de sites e, nos últimos dois anos, finalmente tive a oportunidade de acumular experiência prática como desenvolvedor. Isto vem me ajudando a  solidificar minha missão de criar páginas virtuais cativantes, intuitivas e funcionais.",
+            "1": "Desde muito pequeno tenho curiosidade pela criação de sites e, nos últimos dois anos, finalmente tive a oportunidade de acumular experiência prática como desenvolvedor. Isto tem me ajudado a solidificar minha missão de criar páginas virtuais cativantes, intuitivas e funcionais.",
             "2": "Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias."
         }
     },
@@ -28,6 +33,7 @@
             "framer-motion": "Framer Motion",
             "ajax": "Ajax",
             "jquery": "JQuery",
+            "apis": "RESTful APIs",
             "chartjs": "ChartJS",
             "scss": "SCSS",
             "tailwind": "Tailwind",
@@ -92,12 +98,12 @@
             "sonhario": {
                 "title": "Sonhario",
                 "description": "Aplicação mobile voltada para o registro e análise da rotina de sono do usuário. Oferece insights gráficos e textuais sobre os padrões das suas noites de sono.",
-                "body": "Este projeto foi parte do meu TCC para a graduação em Ciência da Computação. Minha equipe e eu fizemos um extenso trabalho de pesquisa sobre higiene do sono e construímos o aplicativo em Expo com elementos de IA sob recomendação do nosso professor orientador. Foi minha primeira vez trabalhando tanto com Django quando com Expo e foi de fato uma experiência muito proveitosa. Hoje o backend está hospedado gratuitamente no Render utilizando um banco de dados simplificado em SQLite apenas para fins de demonstração. Você pode fazer o download do aplicativo para Android no link abaixo."
+                "body": "Este projeto foi parte do meu TCC para a graduação em Ciência da Computação. Minha equipe e eu fizemos um extenso trabalho de pesquisa sobre higiene do sono e construímos o aplicativo em Expo com elementos de IA sob recomendação do nosso professor orientador. Foi minha primeira vez trabalhando tanto com Django quando com Expo e foi de fato uma experiência muito proveitosa. Hoje a API está hospedada gratuitamente no Render utilizando um banco de dados simplificado em SQLite apenas para fins de demonstração. Você pode fazer o download do aplicativo para Android no link abaixo."
             },
             "selecao": {
-                "title": "Seleção - SEDUC/AL",
+                "title": "Sistema Seleção - SEDUC/AL",
                 "description": "Sistema em Laravel de gerenciamento de editais e inscrição de candidatos para os processos seletivos simplificados da SEDUC/AL.",
-                "body": "Este foi meu principal projeto como estagiário da Secretaria de Estado da Educação de Alagoas. Acompanhá-lo desde sua criação me deu a oportunidade de executar diversas tarefas desde o design de interface até a migração de banco de dados, akém da experiência me comunicando com clientes e resolvendo suas demandas."
+                "body": "Este foi meu principal projeto como estagiário da Secretaria de Estado da Educação de Alagoas. Acompanhá-lo desde sua criação me deu a oportunidade de executar diversas tarefas desde o design de interface até a migração de banco de dados, além da experiência me comunicando com clientes e resolvendo suas demandas."
             },
             "lotacao": {
                 "title": "Perfis de Lotação - SEDUC/AL",
@@ -111,7 +117,7 @@
             },
             "tavern-talk": {
                 "title": "Tavern Talk",
-                "description": "Aplicação web voltada para mobile que permite ao usuário criar personagens de D&D utilizando uma interface de chat.",
+                "description": "Aplicação web voltada para mobile que permite a criação de personagens de D&D utilizando uma interface de chat simplificada.",
                 "body": "Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB."
             }
         }
@@ -121,8 +127,7 @@
         "body": {
             "0": "Na internet toda ideia tem seu lugar e sua audiência, por mais única que seja. Vamos criar algo incrível juntos!"
         },
-
-        "resume": "Currículo",
+        
         "copyright": "Todos os direitos reservados."
     }
 }
