@@ -1,0 +1,88 @@
+{
+    "categories": [
+        "apps", "games", "comics"
+    ],
+    "projects": [
+        {
+            "key":"selecao",
+            "name":"Seleção - SEDUC/AL",
+            "category":"apps",
+            "year":"2024",
+            "tags":[
+                "laravel", "blade", "js", "tailwind", "jquery", "mysql"
+            ],
+            "description":"Sistema que possibilita a criação de editais pela secretaria e a inscrição de usuários candidatos. Este foi meu principal projeto como estagiário da Secretaria de Estado da Educação de Alagoas. Acompanhá-lo desde sua criação me deu a oportunidade de executar diversas tarefas desde o design de interface até a migração de banco de dados, akém da experiência me comunicando com clientes e resolvendo suas demandas.",
+            "actions":{
+                "access":"https://selecao.educacao.al.gov.br/"
+            }
+        },
+        {
+            "key":"tavern-talk",
+            "name":"Tavern Talk",
+            "category":"apps",
+            "year":"2024",
+            "tags":[
+                "vite", "next", "react", "js", "scss", "mongodb"
+            ],
+            "description":"Gera e armazena seus personagens de RPG de mesa com uma interface que se assemelha a um chat. Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB.",
+            "actions":{
+                "access":"https://tavern-talk.vercel.app/",
+                "code":"https://github.com/bunny-sammy/tavern-talk"
+            }
+        },
+        {
+            "key":"portfolio",
+            "name":"Meu Portfolio",
+            "category":"apps",
+            "year":"2025",
+            "tags":[
+                "vite", "react", "ts", "scss", "i18n"
+            ],
+            "description":"Minha intenção com o design desse projeto era transmitir minha personalidade e paixão por arte mantendo a página legível e intuitiva. Espaços web com este nível de individualidade são o que pretendo continuar construindo no futuro.",
+            "actions":{
+                "access":"https://bunny-sammy.github.io/",
+                "code":"https://github.com/bunny-sammy/bunny-sammy.github.io"
+            }
+        },
+        {
+            "key":"pong-clone",
+            "name":"Pong Clone",
+            "category":"games",
+            "year":"2020",
+            "tags":[
+                "unity", "c#", "2d-assets"
+            ],
+            "description":"Um simples clone de Pong criado para fins de aprendizado. Nele você pode jogar com um amigo localmente, guardar highscores e até enfrentar a máquina com uma IA simples. O jogo pode ser baixado ou jogado no próprio browser.",
+            "actions":{
+                "play":"https://bunnysammy.itch.io/pong-2020"
+            }
+        },
+        {
+            "key":"ahiru",
+            "name":"AHIRU",
+            "category":"games",
+            "year":"2025",
+            "tags":[
+                "godot", "2d-assets"
+            ],
+            "description":"\"Ajude um pato pilotando uma bolha a resgatar outros animais utilizando controles de sopro!\" Nossa submissão para a Global Game Jam 2025, onde o tema era \"bolha\". Focamos principalmente em criar uma movimentação única e divertida para nos diferenciar dos demais jogos da jam, tentando mesclar as visões artísticas dos memboros do time. Neste projeto fiquei encarregado apenas da produção de assets do cenário e ilustração do menu de pause.",
+            "actions":{
+                "play":"https://bunnysammy.itch.io/ahiru",
+                "access":"https://globalgamejam.org/games/2025/ahiru-8"
+            }
+        },
+        {
+            "key":"rsg",
+            "name":"Rising Star's Gambit",
+            "category":"games",
+            "year":"2021",
+            "tags":[
+                "rpg-maker-mv", "js"
+            ],
+            "description":"\"Gerencie seu tempo e derote monstros neste RPG Tático para prevenir que sua guilda seja fechada!\" Vencedor de uma game jam, este jogo é a culminação de todo o conhecimento acumulado na minha infância e adolescência brincando com várias edições do RPG Maker. Nele eu demonstro tudo que aprendi não só na ferramenta como também em game design e roteiro como uma grande carta de amor à comunidade de makers.",
+            "actions":{
+                "play":"https://bunnysammy.itch.io/rising-stars-gambit"
+            }
+        }
+    ]
+}

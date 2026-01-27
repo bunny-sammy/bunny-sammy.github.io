@@ -1,3 +1,133 @@
 {
-    "occupation": "Frontend Developer"
+    "landing": {
+        "occupation": "Frontend Developer",
+
+        "resume": {
+            "title": "Resumé",
+            "url": "https://docs.google.com/document/d/1p3OgEMeE8OzO_5qnVGunymB7Uq8uyarArOyvgcJFRII/edit?pli=1&tab=t.azrdlxn4kre8"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "body": {
+            "0": "Hey! I'm David Coelho, a recent Computer Science graduate, web developer focused on user experience and long time artist by hobby.",
+            "1": "Since I was very little I've been curious about the creation of websites and, in the last two years, I've finally had the opportunity to build some practical experience as a developer. This has helped me realize my mission of creating captivating, intuitive and functional virtual pages.",
+            "2": "Currently I'm improving myself on web development, gathering experience in various stacks and technologies."
+        }
+    },
+    "tools": {
+        "title": "Skills",
+        "sections": {
+            "frontend": "Frontend",
+            "backend": "Brontend",
+            "database": "Database",
+            "tools": "Tools",
+            "essentials": "Essentials"
+        },
+        "tags": {
+            "react": "React",
+            "blade": "Laravel Blade",
+            "expo": "Expo",
+            "ts": "TypeScript",
+            "js": "JavaScript",
+            "framer-motion": "Framer Motion",
+            "ajax": "Ajax",
+            "jquery": "JQuery",
+            "apis": "RESTful APIs",
+            "chartjs": "ChartJS",
+            "scss": "SCSS",
+            "tailwind": "Tailwind",
+            "html": "HTML5",
+            "css": "CSS3",
+            "laravel": "Laravel",
+            "next": "Next",
+            "django": "Django",
+            "mongodb": "MongoDB",
+            "postgres": "PostgreSQL",
+            "mysql": "MySQL",
+            "git": "Git",
+            "vercel": "Vercel",
+            "figma": "Figma",
+            "affinity": "Affinity 3.0",
+            "python": "Python",
+            "java": "Java",
+            "c#": "C#",
+            "responsive": "Responsive Design",
+            "ux": "UI/UX Design Principles",
+            "components": "Component-based Architecture",
+            "prototyping": "Prototyping",
+            "vectors": "Vector Illustration",
+            "motion": "Motion Design Principles"
+        }
+    },
+    "labs": {
+        "title": "Experiments",
+        "body": {
+            "0": "Here are a few pages I built to get familiar with a specific concept."
+        },
+
+        "data": {
+            "virtual-gallery": {
+                "title": "Digital Gallery with Infinite Canvas"
+            }
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "body": {
+            "0": "You can get to know my work better through these projects."
+        },
+
+        "modal": {
+            "header": "Browse Projects",
+            "github": "Access repository on GitHub",
+            "view": "View published page"
+        },
+
+        "data": {            
+            "portfolio": {
+                "title": "This Portfolio",
+                "description": "A simple porfolio built in React. It has an animated vector illustration and an interactive projects list.",
+                "body": "Trust me when I say, this page has gone through about three versions before I finally completed it. In january 2026 I decided to do this overhaul from scratch and had the idea to place an illustration as the page's key visual. It was an opportunity to force myself to learn vector drawing, something I had been procrastinating on for a long time. I decided to learn using Affinity, which had recently become free to use. I must say, I'm very proud with the result."
+            },
+            "pokesort": {
+                "title": "Pokesort",
+                "description": "A Pokémon-themed daily association web game built in Next and hosted on Vercel. It allows the creation of custom puzzles and daily automatic generation.",
+                "body": "I built this project along with a good friend of mine, who offered the idea and developed the backend while I took care of design and implementation of the user experience in React and the project's deployment on Vercel. It was a great experience building a true passion project like this one. Currently it's online with daily puzzles and an infinite mode."
+            },
+            "sonhario": {
+                "title": "Sonhario",
+                "description": "Mobile app focused on the user’s sleep habits record and analysis. It offers graphic and textual insights about the patterns in your nightly rest.",
+                "body": "This was the final project for my graduation in Computer Science. My team and I did an extensive research about sleep hygiene and built the app in Expo with AI elements by recommendation of our guiding professor. It was my first time working with both Django and Expo and it was a very fruitful experience indeed. Currently the API hosted for free on Render using a simplified SQLite database for mere demonstration purposes. You may download the app for Android using the link below."
+            },
+            "selecao": {
+                "title": "Selection System - SEDUC/AL",
+                "description": "A Laravel system dedicated to notice management and candidate registration for SEDUC/AL’s selection processes",
+                "body": "This was my main project as intern at the Secretaria de Estado da Educação de Alagoas (Alagoas State Department of Education). Being involved with it since its conception gave me the opportunity to execute many tasks from interface design to database migration, not to mention the experience working with clients and dealing with their demands."
+            },
+            "lotacao": {
+                "title": "Capacity Profiles - SEDUC/AL",
+                "description": "Management system built in Laravel for servers, schools, and curricular frameworks of the state public education network.",
+                "body": "I led this project's development team during my second year of internship at SEDUC/AL. I worked on a complete user experience overhaul and implemented many of the changes, especially in terms of curricular framework management and custom report generation"
+            },
+            "safety-net": {
+                "title": "Safety Net Project",
+                "description": "A simple informative web page with the intent of propagating knowledge about digital well-being and safety. Contains posts written by our team.",
+                "body": "My team and I created this website as an extension project during our bachelor's in Computer Science. We carried out research about the themes in question so we could write the posts and promoted them by distributing pamphlets in a public school in the Alagoas state network, along with a presentation and game with the elementary school students present."
+            },
+            "tavern-talk": {
+                "title": "Tavern Talk",
+                "description": "Mobile focused web app that allows the creation of D&D characters using a simplified chat interface.",
+                "body": "This one has a funny story: My team and I had to restart the project from scratch a day before the deadline for a class and this is the result. It was a good learning experience as it forced me to learn how to create an API in Next and how to use MongoDB."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "body": {
+            "0": "On the internet every idea has its place and its audience, as unique as it may be. Let's create something incredible together!"
+        },
+        
+        "copyright": "All rights reserved."
+    }
 }
