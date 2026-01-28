@@ -1,0 +1,133 @@
+{
+    "landing": {
+        "occupation": "Desenvolvedor Frontend",
+
+        "resume": {
+            "title": "Currículo",
+            "url": "https://docs.google.com/document/d/1p3OgEMeE8OzO_5qnVGunymB7Uq8uyarArOyvgcJFRII/edit?pli=1&tab=t.0"
+        }
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "body": {
+            "0": "Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.",
+            "1": "Desde muito pequeno tenho curiosidade pela criação de sites e, nos últimos dois anos, finalmente tive a oportunidade de acumular experiência prática como desenvolvedor. Isto tem me ajudado a solidificar minha missão de criar páginas virtuais cativantes, intuitivas e funcionais.",
+            "2": "Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias."
+        }
+    },
+    "tools": {
+        "title": "Habilidades",
+        "sections": {
+            "frontend": "Frontend",
+            "backend": "Brontend",
+            "database": "Banco de Dados",
+            "tools": "Ferramentas",
+            "essentials": "Essenciais"
+        },
+        "tags": {
+            "react": "React",
+            "blade": "Laravel Blade",
+            "expo": "Expo",
+            "ts": "TypeScript",
+            "js": "JavaScript",
+            "framer-motion": "Framer Motion",
+            "ajax": "Ajax",
+            "jquery": "JQuery",
+            "apis": "RESTful APIs",
+            "chartjs": "ChartJS",
+            "scss": "SCSS",
+            "tailwind": "Tailwind",
+            "html": "HTML5",
+            "css": "CSS3",
+            "laravel": "Laravel",
+            "next": "Next",
+            "django": "Django",
+            "mongodb": "MongoDB",
+            "postgres": "PostgreSQL",
+            "mysql": "MySQL",
+            "git": "Git",
+            "vercel": "Vercel",
+            "figma": "Figma",
+            "affinity": "Affinity 3.0",
+            "python": "Python",
+            "java": "Java",
+            "c#": "C#",
+            "responsive": "Design Responsivo",
+            "ux": "Princípios de UI/UX Design",
+            "components": "Arquitetura em Componentes",
+            "prototyping": "Prototipação",
+            "vectors": "Ilustração Vetorial",
+            "motion": "Princípios de Motion Design"
+        }
+    },
+    "labs": {
+        "title": "Experimentos",
+        "body": {
+            "0": "Aqui estão reunidas algumas páginas que criei para estudar algum conceito específico."
+        },
+
+        "data": {
+            "virtual-gallery": {
+                "title": "Galeria Digital com Canvas Infinito"
+            }
+        }
+    },
+    "projects": {
+        "title": "Projetos",
+        "body": {
+            "0": "Você pode conhecer melhor o meu trabalho a partir destes projetos."
+        },
+
+        "modal": {
+            "header": "Navegar Projetos",
+            "github": "Acessar repositório no GitHub",
+            "view": "Visualizar página publicada"
+        },
+
+        "data": {            
+            "portfolio": {
+                "title": "Este Portfólio",
+                "description": "Portfólio simples construído em React. Possui uma ilustração vetorial animada e listagem interativa de projetos.",
+                "body": "Confie em mim quando eu digo, essa página já passou por umas três versões até eu finalmente conseguir finalizá-la. Em janeiro de 2026 eu decidi fazer essa repaginada do zero e tive a ideia de colocar uma ilustração como visual central da página. Foi uma oportunidade de me forçar a aprender desenho vetorial, coisa que eu venho procrastinando há muito tempo. Decidi aprender usando o Affinity, que havia recentemente se tornado gratuito. Devo dizer que fiquei bem feliz com o resultado."
+            },
+            "pokesort": {
+                "title": "Pokesort",
+                "description": "Jogo web diário de associação temático de Pokémon construído em Next e hospedado no Vercel. Permite a criação de puzzles customizados bem como a geração automática diária.",
+                "body": "Construí esse projeto junto de um grande amigo meu, que ofereceu a ideia e desenvolveu o backend enquanto eu cuidei do design e implementação da experiência de usuário em React e a produção do projeto no Vercel. Foi uma experiência muito proveitosa produzir um verdadeiro projeto de paixão como esse. Atualmente ele está no ar com puzzles diários e um modo infinito."
+            },
+            "sonhario": {
+                "title": "Sonhario",
+                "description": "Aplicação mobile voltada para o registro e análise da rotina de sono do usuário. Oferece insights gráficos e textuais sobre os padrões das suas noites de sono.",
+                "body": "Este projeto foi parte do meu TCC para a graduação em Ciência da Computação. Minha equipe e eu fizemos um extenso trabalho de pesquisa sobre higiene do sono e construímos o aplicativo em Expo com elementos de IA sob recomendação do nosso professor orientador. Foi minha primeira vez trabalhando tanto com Django quando com Expo e foi de fato uma experiência muito proveitosa. Hoje a API está hospedada gratuitamente no Render utilizando um banco de dados simplificado em SQLite apenas para fins de demonstração. Você pode fazer o download do aplicativo para Android no link abaixo."
+            },
+            "selecao": {
+                "title": "Sistema Seleção - SEDUC/AL",
+                "description": "Sistema em Laravel de gerenciamento de editais e inscrição de candidatos para os processos seletivos simplificados da SEDUC/AL.",
+                "body": "Este foi meu principal projeto como estagiário da Secretaria de Estado da Educação de Alagoas. Acompanhá-lo desde sua criação me deu a oportunidade de executar diversas tarefas desde o design de interface até a migração de banco de dados, além da experiência me comunicando com clientes e resolvendo suas demandas."
+            },
+            "lotacao": {
+                "title": "Perfis de Lotação - SEDUC/AL",
+                "description": "Sistema de gestão de servidores, escolas e matrizes curriculares da rede estadual de ensino criado em Laravel.",
+                "body": "Liderei o time de desenvolvimento deste projeto durante meu segundo ano de estágio na SEDUC/AL. Atuei na repaginação completa da experiência de usuário e na implementação das mudanças, principalmente na  estão de matrizes curriculares e geração de relatórios customizados."
+            },
+            "safety-net": {
+                "title": "Projeto Safety Net",
+                "description": "Página web informativa simples com o intuito de propagar conhecimento sobre bem-estar e segurança digital. Contem posts escritos pela nossa equipe.",
+                "body": "Minha equipe e eu criamos esse site como projeto de extensão durante nossa graduação em Ciência da Computação. Realizamos a pesquisa sobre os temas para escrever os posts e fizemos a divulgação dos mesmos por meio de panfletos distribuídos em uma escola da rede estadual de Alagoas, bem como por uma palestra e dinâmica com os alunos do 8º e 9º ano da mesma."
+            },
+            "tavern-talk": {
+                "title": "Tavern Talk",
+                "description": "Aplicação web voltada para mobile que permite a criação de personagens de D&D utilizando uma interface de chat simplificada.",
+                "body": "Esse tem uma história engraçada: Minha equipe e eu tivemos que recomeçar o projeto do zero um dia antes da entrega para uma matéria na faculdade e este foi o resultado. Foi uma ótima experiência de aprendizado pois me forçou a aprender como criar uma API em Next e como utilizar o MongoDB."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contato",
+        "body": {
+            "0": "Na internet toda ideia tem seu lugar e sua audiência, por mais única que seja. Vamos criar algo incrível juntos!"
+        },
+        
+        "copyright": "Todos os direitos reservados."
+    }
+}
