@@ -18,6 +18,12 @@ export const TOOLS: Record<string, string[]> = {
 
 export const LABS: Lab[] = [
     {
+        id: "js-raycaster",
+        year: 2026,
+        tags: ["html", "js", "responsive"],
+        link: "https://bunny-sammy.github.io/js-raycaster"
+    },
+    {
         id: "virtual-gallery",
         year: 2025,
         tags: ["react", "framer-motion", "ts", "scss", "responsive"],
