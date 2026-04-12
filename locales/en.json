@@ -67,6 +67,9 @@
         },
 
         "data": {
+            "js-raycaster": {
+                "title": "Pseudo-3D with Raycasting in Javascript"
+            },
             "virtual-gallery": {
                 "title": "Digital Gallery with Infinite Canvas"
             }
