@@ -90,8 +90,8 @@ aside {
         width: 100%;
     }
 
-    @media (max-width: 640px) {
-        nav button {
+    @media (max-width: 480px) {
+        nav a {
             font-size: 0.8rem;
             svg {
                 width: 18px;
