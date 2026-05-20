@@ -18,7 +18,7 @@ aside {
     gap: 1rem;
 
     @media (prefers-reduced-motion: no-preference) {
-        animation: landing-fade-in .75s 0s 1 ease-out;
+        animation: landing-fade-in .75s cubic-bezier(0, 0.55, 0.45, 1) 0s 1;
     }
 
     hgroup {
@@ -116,23 +116,26 @@ svg#hero {
         }
     }
 
-    #balloons-top > g {
-        transform-origin: left;
-        @media (prefers-reduced-motion: no-preference) {
-            animation: hero-balloons 6s var(--delay) infinite;
-        }
-
-        &:nth-child(4n-2) {
-            --delay: 0s;
-        }
-        &:nth-child(4n-1) {
-            --delay: 1s;
-        }
-        &:nth-child(4n) {
-            --delay: 2s;
-        }
-        &:nth-child(4n+1) {
-            --delay: 3s;
+    &.animate {
+    
+        #balloons-top > g {
+            transform-origin: left;
+            @media (prefers-reduced-motion: no-preference) {
+                animation: hero-balloons 6s ease-in-out var(--delay) infinite;
+            }
+    
+            &:nth-child(4n-2) {
+                --delay: 0s;
+            }
+            &:nth-child(4n-1) {
+                --delay: .5s;
+            }
+            &:nth-child(4n) {
+                --delay: 1s;
+            }
+            &:nth-child(4n+1) {
+                --delay: 1.5s;
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-// import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LINKS } from "../scripts/utils";
 
 import '../styles/components/Landing.scss'
@@ -13,10 +13,17 @@ import Down from "../assets/svg/down.svg?react";
 
 export default function Landing() {
   const { t } = useTranslation();
+  const [animateHero, setAnimateHero] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimateHero(true);
+    }, 900);
+  }, [])
 
   return (
     <aside>
-      <Hero id="hero" />
+      <Hero id="hero" className={animateHero ? "animate" : ""} />
       <hgroup>
         <h1 className="playwrite">
           David Coelho
