@@ -54,6 +54,8 @@ function ProjectsModal ({isOpen, setIsOpen, currentProjectId, setCurrentProjectI
 }
 
 export default function ProjectsList() {
+    const {t} = useTranslation();
+    
     const projectsPreview = [...PROJECTS].slice(0, 3);
     const [openProjectsModal, setOpenProjectsModal] = useState<boolean>(false);
     const [currentProjectId, setCurrentProjectId] = useState<string>();
@@ -76,7 +78,7 @@ export default function ProjectsList() {
                     <ProjectCard key={project.id} project={project} onClick={prepareProjectsModal} />
                 ))}
                 <button className="more-button accent hover-effect" onClick={() => prepareProjectsModal()}>
-                    Ver mais
+                    {t(`about.more`)}
                     <Down />
                 </button>
             </ul>

@@ -71,6 +71,10 @@ article {
     margin: 0;
     text-align: center;
     font-size: .85rem;
+
+    @media (max-width: 640px) {
+        font-size: .65rem;
+    }
 }
 
 @keyframes card-fade-in {

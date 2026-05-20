@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-// import { useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 
 import '../styles/components/Article.scss'
 import About from "../assets/svg/user.svg?react";
@@ -11,20 +11,37 @@ import ContactList from "./ContactList";
 import ToolsList from "./ToolsList";
 import ProjectsList from "./ProjectsList";
 import LabsList from "./LabsList";
+import Down from "../assets/svg/down.svg?react";
 
 export default function Article() {
   const { t } = useTranslation();
+  const [expandAbout, setExpandAbout] = useState<boolean>(false);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleExpandAbout = useCallback(() => {
+    setExpandAbout((prev) => !prev);
+    aboutRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+  }, [aboutRef]);
 
   return (
     <article id="article">        
-        <div className="about-card article-card">
+        <div ref={aboutRef} className={`about-card article-card ${expandAbout ? "" : "contract"}`}>
           <hgroup>
             <About />
             <h3>{t(`about.title`)}</h3>
           </hgroup>
           <p>{t(`about.body.0`)}</p>
-          <p>{t(`about.body.1`)}</p>          
+          <p>{t(`about.body.1`)}</p>
           <p>{t(`about.body.2`)}</p>
+          <div className="more-container" onClick={toggleExpandAbout}>
+            <button className="more-button accent hover-effect">
+                {expandAbout ? t(`about.less`) : t(`about.more`)}
+                <Down />
+            </button>
+          </div>
         </div>
         <div className="article-card">
           <hgroup>

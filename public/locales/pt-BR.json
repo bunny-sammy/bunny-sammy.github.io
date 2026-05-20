@@ -13,7 +13,9 @@
             "0": "Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.",
             "1": "Desde muito pequeno tenho curiosidade pela criação de sites e, nos últimos dois anos, finalmente tive a oportunidade de acumular experiência prática como desenvolvedor. Isto tem me ajudado a solidificar minha missão de criar páginas virtuais cativantes, intuitivas e funcionais.",
             "2": "Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias."
-        }
+        },
+        "more": "Ver mais",
+        "less": "Ver menos"
     },
     "tools": {
         "title": "Habilidades",
