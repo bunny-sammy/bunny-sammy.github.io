@@ -1,6 +1,6 @@
 {
     "landing": {
-        "occupation": "Frontend Developer",
+        "occupation": "Fullstack Developer",
 
         "resume": {
             "title": "Resumé",
@@ -10,9 +10,9 @@
     "about": {
         "title": "About Me",
         "body": {
-            "0": "Hey! I'm David Coelho, a recent Computer Science graduate, web developer focused on user experience and long time artist by hobby.",
+            "0": "Hey! I'm David Coelho, graduated in Computer Science, with primary experience in frontend web development, strong skills in responsive design, component-based architecture, and user-centered design. Familiar with React, TypeScript, and RESTful API integration.",
             "1": "Since I was very little I've been curious about the creation of websites and, in the last two years, I've finally had the opportunity to build some practical experience as a developer. This has helped me realize my mission of creating captivating, intuitive and functional virtual pages.",
-            "2": "Currently I'm improving myself on web development, gathering experience in various stacks and technologies."
+            "2": "Currently I'm improving myself as a developer, gathering experience in various stacks and technologies."
         },
         "more": "See more",
         "less": "See less"
@@ -41,6 +41,7 @@
             "tailwind": "Tailwind",
             "html": "HTML5",
             "css": "CSS3",
+            "rust": "Rust",
             "laravel": "Laravel",
             "next": "Next",
             "django": "Django",
@@ -48,6 +49,7 @@
             "postgres": "PostgreSQL",
             "mysql": "MySQL",
             "git": "Git",
+            "docker": "Docker",
             "vercel": "Vercel",
             "figma": "Figma",
             "affinity": "Affinity 3.0",

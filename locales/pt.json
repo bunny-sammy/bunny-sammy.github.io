@@ -1,6 +1,6 @@
 {
     "landing": {
-        "occupation": "Desenvolvedor Frontend",
+        "occupation": "Desenvolvedor Fullstack",
 
         "resume": {
             "title": "Currículo",
@@ -10,9 +10,9 @@
     "about": {
         "title": "Sobre Mim",
         "body": {
-            "0": "Olá! Eu sou David Coelho, recém-formado em Ciência da Computação, desenvolvedor web focado em experiência de usuário e artista por hobby de longa data.",
+            "0": "Olá! Eu sou David Coelho, formado em Ciência da Computação, experiente principalmente no desenvolvimento web, com aptidão em design responsivo, arquitetura em componentes e design focado no usuário. Familiar com React, TypeScript e integração de APIs RESTful.",
             "1": "Desde muito pequeno tenho curiosidade pela criação de sites e, nos últimos dois anos, finalmente tive a oportunidade de acumular experiência prática como desenvolvedor. Isto tem me ajudado a solidificar minha missão de criar páginas virtuais cativantes, intuitivas e funcionais.",
-            "2": "Atualmente estou me aperfeiçoando no desenvolvimento web, acumulando experiências com diversas stacks e tecnologias."
+            "2": "Atualmente estou me aperfeiçoando como desenvolvedor, acumulando experiências com diversas stacks e tecnologias."
         },
         "more": "Ver mais",
         "less": "Ver menos"
@@ -41,6 +41,7 @@
             "tailwind": "Tailwind",
             "html": "HTML5",
             "css": "CSS3",
+            "rust": "Rust",
             "laravel": "Laravel",
             "next": "Next",
             "django": "Django",
@@ -48,6 +49,7 @@
             "postgres": "PostgreSQL",
             "mysql": "MySQL",
             "git": "Git",
+            "docker": "Docker",
             "vercel": "Vercel",
             "figma": "Figma",
             "affinity": "Affinity 3.0",
