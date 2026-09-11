@@ -43,9 +43,6 @@ export default function Landing() {
           <a target="_blank" href={LINKS['github']}>
             <Github />
           </a>
-          <a target="_blank" href={LINKS['instagram']}>
-            <Instagram />
-          </a>
         </nav>
         <a href="#article" id="down">
           <Down />

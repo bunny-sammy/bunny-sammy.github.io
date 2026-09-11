@@ -21,10 +21,6 @@ export default function ContactList() {
                 <Github />
                 bunny-sammy
             </a>
-            <a target="_blank" className="hover-effect accent" href={LINKS['instagram']}>
-                <Instagram />
-                bunnysammy_
-            </a>
         </ul>
     )
 }

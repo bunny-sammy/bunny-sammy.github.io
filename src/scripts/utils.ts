@@ -5,14 +5,13 @@ export const LINKS: Record<string, string> = {
     'email': 'mailto:dsamuel.coelho@hotmail.com',
     'linkedin': 'https://www.linkedin.com/in/dsamcoelho/',
     'github': 'https://github.com/bunny-sammy',
-    'instagram': 'https://www.instagram.com/bunnysammy_'
 } as const;
 
 export const TOOLS: Record<string, string[]> = {
     'frontend': ["react", "blade", "expo", "ts", "js", "framer-motion", "jquery", "chartjs", "scss", "tailwind", "html", "css"],
-    'backend': ["laravel", "next", "django"],
-    'database': ["mongodb", "postgres"],
-    'tools': ["git", "vercel", "figma", "affinity"],
+    'backend': ["rust", "laravel", "next", "django"],
+    'database': ["mongodb", "postgres", "mysql"],
+    'tools': ["git", "docker", "figma", "affinity"],
     'essentials': ["responsive", "ux", "apis", "components", "prototyping", "vectors", "motion"]
 } as const;
 
